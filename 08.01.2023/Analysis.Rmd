@@ -2,7 +2,9 @@
 title: "Analysis"
 author: "Pranay Gundam"
 date: "`r Sys.Date()`"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 # State Name Etymology
@@ -20,30 +22,47 @@ state's name as a proxy for Native American vs European influence on a state.
 This is of course not anywhere near perfectly analogous but gives some level of
 insight about the early formation of a given state.
 
-
-```{r}
+```{r, include=FALSE}
 library(tidyverse)
 ```
-
-
-```{r}
+```{r, include=FALSE}
 states = read_csv("states.csv")
 etymo = read_csv("state_name_etymology.csv")
 ```
 
+### EDA
 
-The states dataset is 
+There are originally two datasets that we combine together which in total has
+information on simple characteristics of each state such as its' population in 
+2020, number of representatives in the House of Representatives, land/water
+area metrics, and etymological characteristics of a states' name. Currently 
+there are various languages and we characterize them into European or not.
 
 ```{r}
-
 mergedf = merge(states, etymo, by = "state")
 
-head(mergedf)
+eurolang = function(x){
+  y = substring(x, 1, 8)
+  return(grepl("Spanish", y, fixed=TRUE) |
+         grepl("English", y, fixed=TRUE) |
+         grepl("Latin", y, fixed=TRUE) |
+         grepl("Russian", y, fixed=TRUE) |
+         grepl("French", y, fixed=TRUE) |
+         grepl("Greek", y, fixed=TRUE) |
+         grepl("Dutch", y, fixed=TRUE))
+}
+
+findf = mergedf %>%
+  mutate(eurolang = ifelse(eurolang(language), 1, 0))
 ```
 
-```{r}
-unique(mergedf$language)
-```
+After doing so, we can see that the division between these two classes of 
+languages is close to even. 26 European languages and 30 non-European languages.
+
+### Main Analysis
+
+The ultimate goal is to identify 
+
 
 ```{r}
 mergedf %>%
