@@ -61,7 +61,7 @@ languages is close to even. 26 European languages and 30 non-European languages.
 
 ### Main Analysis
 
-The ultimate goal is to identify 
+The ultimate goal is to identify the marginal effects of 
 
 
 ```{r}
