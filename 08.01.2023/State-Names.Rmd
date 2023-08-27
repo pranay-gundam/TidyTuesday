@@ -1,0 +1,114 @@
+---
+title: "State Names"
+author: "Pranay Gundam"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# State Name Etymology
+
+First as some color commentary for this first TidyTuesday analysis. This data 
+set doesn't give one much to work with. There are some interesting 
+visualizations one can make, but I found it quite difficult to ask any 
+meaningful well conditioned research questions. That being said the best I could
+think of for now was: The effects of native american vs european influence on
+states.
+
+The influence of Native American vs European culture is not a very concrete 
+term. In the context of this project, we will be using the etymology of a 
+state's name as a proxy for Native American vs European influence on a state. 
+This is of course not anywhere near perfectly analogous but gives some level of
+insight about the early formation of a given state.
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+```{r, include=FALSE}
+states = read_csv("states.csv")
+etymo = read_csv("state_name_etymology.csv")
+```
+
+### EDA
+
+There are originally two datasets that we combine together which in total has
+information on simple characteristics of each state such as its' population in 
+2020, number of representatives in the House of Representatives, land/water
+area metrics, and etymological characteristics of a states' name. Currently 
+there are various languages and we characterize them into European or not.
+
+```{r}
+mergedf = merge(states, etymo, by = "state")
+
+eurolang = function(x){
+  y = substring(x, 1, 8)
+  return(grepl("Spanish", y, fixed=TRUE) |
+         grepl("English", y, fixed=TRUE) |
+         grepl("Latin", y, fixed=TRUE) |
+         grepl("Russian", y, fixed=TRUE) |
+         grepl("French", y, fixed=TRUE) |
+         grepl("Greek", y, fixed=TRUE) |
+         grepl("Dutch", y, fixed=TRUE))
+}
+
+findf = mergedf %>%
+  mutate(eurolang = ifelse(eurolang(language), 1, 0))
+```
+
+After doing so, we can see that the division between these two classes of 
+languages is close to even. 26 European languages and 30 non-European languages.
+
+### Main Analysis
+
+For the first TidyTuesday we are keeping things simple and just creating a fixed
+effects model to determine if having a european vs native american origin has an 
+effect on the population of a state in 2020 controlled by its land size, water
+size and the date at which the state's name was decided. Our regression looks
+like 
+
+$$pop = \beta_0 + \beta_1X_{origin} + \pmb{\beta}Z + \epsilon.$$
+
+Our data set doesn't give a very clear variable to indicate if a state is of 
+european native american origin but we will be using the etymology of a 
+state's name as a proxy for its origin.
+
+
+```{r}
+model = lm(data = findf, formula = population_2020 ~ admission + date_named + 
+             land_area_km2 + water_area_km2 + eurolang)
+summary(model)
+```
+
+The results indicate that there isn't any statistically significant effect of 
+the eurolang variable (and therefore our proxy for the cultural origins of a 
+state) on the population of a state in 2020. As an explanation for our result, 
+other than the obvious potential explanation that there simply is no 
+relationship between the two it could also be that the amount of time that has 
+passed since the founding of a state has overturned any residual effects of its
+cultural founding.
+
+We should obviously discuss some limitations of the discussion above. There
+are undoubtedly some un-tracked variables that could contribute to omitted 
+variable bias: for example, it is likely that the distance to a body of water
+and ports is connected to both the population in that state and the etymological
+origins of that state (since these are the states that were often colonized 
+first by europeans).
+
+In addition, the relationship between the etymology of a state's name and it's
+cultural origins may not be a strong link which would make the supposed
+causal relationship we are trying to discern between the cultural origins of a 
+state and its population in 2020 not the relationship we are exploring.
+
+## Future TidyTuesday Posts
+
+This current post personally feels a bit lackadaisical in terms of what I am 
+actually doing but I just wanted to get one out the door and I have to start 
+somewhere before I can release a product that is something I've worked on only 
+for a week and I am also satisfied with.
+
+Future posts, conditional on the specific data set that we are working with and
+the type of questions we can ask, will range from building machine learning 
+models to questions about causality or forecasting. Also, as a preface for the 
+next two posts, the data sets we will be using are regarding spam emails and 
+fair use cases. 
