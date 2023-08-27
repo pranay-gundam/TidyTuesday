@@ -1,0 +1,17 @@
+---
+title: "State Names"
+author: "Pranay Gundam"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r, include=FALSE}
+library(tidyverse)
+```
+```{r, include=FALSE}
+cases = read_csv("fair_use_cases.csv")
+findings = read_csv("fair_use_findings.csv")
+```
+
