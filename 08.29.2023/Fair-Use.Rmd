@@ -7,11 +7,94 @@ output:
   html_document: default
 ---
 
-```{r, include=FALSE}
+# Fair Use Cases
+
+This data set contains 251 legal cases regarding fair use law. There are a few
+observed variables, but not enough to make a convincing predictive model to 
+determine if a case would lean one way or the other (as was my initial thoughts 
+when taking an initial look at this data set). 
+
+## EDA
+
+```{r, message=FALSE, output=FALSE}
 library(tidyverse)
-```
-```{r, include=FALSE}
 cases = read_csv("fair_use_cases.csv")
 findings = read_csv("fair_use_findings.csv")
+
 ```
+
+
+% Make a bar chart of ruling counts
+```{r}
+num_cases = cases %>%
+  mutate(fair_use_found_num = ifelse(fair_use_found, 1, 0)) %>%
+  group_by(year) %>%
+  summarize(total_cases = n(),
+            fair_use_found_sum = sum(fair_use_found_num),
+            percent_fair = fair_use_found_sum/total_cases) %>%
+  pivot_longer(cols = c(total_cases, fair_use_found_sum, percent_fair))
+
+num_cases_per = num_cases %>%
+  subset(name == "percent_fair")
+
+num_cases %>% 
+  ggplot(aes(x = year, y = value, color = name))+
+  geom_line()
+  
+num_cases_per %>% 
+  ggplot(aes(x = year, y = value))+
+  geom_line()+
+  geom_smooth()
+
+```
+
+
+% Make a summary table of all the counts of each tag of cases
+
+```{r}
+tag_count = cases %>%
+  select(c("year", "categories")) %>%
+  separate_wider_delim(cols = "categories", delim = c("; "), 
+                       names = c("tag1", "tag2", "tag3", "tag4", "tag5"),
+                       too_few = "align_start") %>%
+  pivot_longer(cols = c("tag1", "tag2", "tag3", "tag4", "tag5")) %>%
+  na.omit() %>%
+  group_by(value) %>%
+  summarize(tag_count = n())
+
+tag_count
+```
+
+
+% Make a histogram of cases per year
+
+```{r}
+case_count = cases %>%
+  mutate(fair_use_found_num = ifelse(fair_use_found, 1, 0)) %>%
+  group_by(year) %>%
+  summarize(total_cases = n())
+
+case_count %>%
+  ggplot(aes(x = year, y = total_cases))+
+  geom_bar(stat = "identity", alpha = 0.6, fill = "darkgreen")+
+  labs(x = "Year", y = "Count")
+
+case_count_ext = cases %>%
+  mutate(fair_use_found_num = ifelse(fair_use_found, 1, 0)) %>%
+  group_by(year) %>%
+  summarize(total_cases = n(),
+            fair_use_found = sum(fair_use_found_num),
+            fair_use_not_found = total_cases - fair_use_found) %>%
+  select(-c(total_cases)) %>%
+  pivot_longer(cols = c(fair_use_found, fair_use_not_found))
+
+case_count_ext %>%
+  ggplot(aes(x = year, y = value, fill = name))+
+  geom_bar(stat = "identity", alpha = 0.6)+
+  labs(x = "Year", y = "Count")
+```
+
+
+
+
 
