@@ -1,11 +1,12 @@
 import pyfredapi as pf
 from dotenv import load_dotenv
 import os
-from datetime import date
 import random
+import pandas as pd
+from typing import Tuple
 
 class Fred:
-    def __init__(self, api_key = None):
+    def __init__(self, api_key: str = None):
         if api_key is None:
             load_dotenv()
 
@@ -15,13 +16,13 @@ class Fred:
         else:
             self.api_key = api_key
 
-    def get_category(self, category_id):
+    def get_category(self, category_id: int) -> dict:
         return pf.get_category(category_id=category_id, api_key=self.api_key)
 
-    def get_category_children(self, category_id):
+    def get_category_children(self, category_id: int) -> dict:
         return pf.get_category_children(category_id=category_id, api_key=self.api_key)
 
-    def choose_random_category(self, category_id = 0):
+    def choose_random_category(self, category_id: int = 0) -> Tuple[str, str]:
         children = self.get_category_children(category_id)["categories"]
         random_child = None
         
@@ -37,24 +38,24 @@ class Fred:
             
         return id, name
 
-    def get_category_series(self, category_id):
+    def get_category_series(self, category_id: int) -> dict:
         return pf.get_category_series(category_id=category_id, api_key=self.api_key)
 
-    def get_series(self, series_id):
+    def get_series(self, series_id: str) -> pd.DataFrame:
         return pf.get_series(series_id, api_key=self.api_key)
 
-    def choose_random_series(self, category_id = 0):
+    def choose_random_series(self, category_id:int = 0) -> Tuple[str, pd.DataFrame]:
         category_id, _ = self.choose_random_category(category_id)
         series_list = self.get_category_series(category_id)
+        while not series_list:
+            category_id, _ = self.choose_random_category(category_id)
+            series_list = self.get_category_series(category_id)
         series_keys = list(series_list.keys())
         series_id = random.choice(series_keys)
 
         return series_list[series_id], self.get_series(series_id)
 
 
-
-
-# Testing
-fred = Fred()
-info, data = fred.choose_random_series()
-print(info.id, info.title)
+class Bloomberg:
+    def __init__(self):
+        pass
