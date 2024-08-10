@@ -1,5 +1,6 @@
 from data_pull import *
 from data_format import *
+from regressions import *
 
 # Fred Testing
 def choosing_series(fred):
@@ -29,8 +30,13 @@ def getting_random_formatted_data():
     print("-------------------")
     print(clean)
 
+def running_basic_regression():
+    raw, clean = get_merged_dfs_dense([("fred", 2)])
+    print(raw)
+    print("-------------------")
+    print(clean)
 
-
+    model = run_linear_regression(clean, "UNRATE", ["GDPC1"])
 
 if __name__ == "__main__":
     getting_random_formatted_data()
