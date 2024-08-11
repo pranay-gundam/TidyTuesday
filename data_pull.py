@@ -47,9 +47,11 @@ class Fred:
     def choose_random_series(self, category_id:int = 0) -> Tuple[str, pd.DataFrame]:
         category_id, _ = self.choose_random_category(category_id)
         series_list = self.get_category_series(category_id)
+        
         while not series_list:
             category_id, _ = self.choose_random_category(category_id)
             series_list = self.get_category_series(category_id)
+        
         series_keys = list(series_list.keys())
         series_id = random.choice(series_keys)
 

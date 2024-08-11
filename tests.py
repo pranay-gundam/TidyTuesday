@@ -31,14 +31,14 @@ def getting_random_formatted_data():
     print(clean)
 
 def running_basic_regression():
-    raw, clean = get_merged_dfs_dense([("fred", 2)])
+    raw, clean = get_merged_dfs_dense([("fred", 2)], 30)
     print(raw)
     print("-------------------")
     print(clean)
-
-    model = run_linear_regression(clean, "UNRATE", ["GDPC1"])
+    
 
 if __name__ == "__main__":
-    getting_random_formatted_data()
+    running_basic_regression()
+
 
 

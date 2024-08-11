@@ -1,4 +1,4 @@
-from sklearn.linear_model import LinearRegression
+import statsmodels.api as sm
 import pandas as pd
 from typing import List
 
@@ -9,7 +9,9 @@ class Regression_Info:
         self.tokens = tokens
         self.date_str = date_str
 
-        
+        self.models = dict()
+        self.model_summaries = dict()
+        self.plots = dict()
 
     def get_raw(self) -> pd.DataFrame:
         return self.df_raw
@@ -20,16 +22,28 @@ class Regression_Info:
     def get_tokens(self) -> List[str]:        
         return self.tokens
     
-    def add_token(self, token: str):
+    def add_token(self, token: str) -> None:
         self.tokens.append(token)
 
-def run_linear_regression(df: pd.DataFrame, y_col: str, x_cols: List[str]) -> LinearRegression:
-    model = LinearRegression()
-    model.fit(df[x_cols], df[y_col])
-    return model
+    def run_linear_regression(self, model_name: str, y_col: str, x_cols: List[str], df_type: str = "clean") -> sm.OLS:
+        if df_type == "clean":
+            df = self.df_clean
+        else:
+            df = self.df_raw
+        
+        X = df[x_cols]
+        X = sm.add_constant(X)  # Adds a constant term to the predictor
+        y = df[y_col]
+        
+        model = sm.OLS(y, X).fit()
+        
+        self.models[model_name] = model
+        self.model_summaries[model_name] = model.summary()
 
-def get_linear_regression_summary(model: LinearRegression, df: pd.DataFrame, x_cols: List[str], y_col: str) -> dict:
-    coef = model.coef_
-    intercept = model.intercept_
-    r_squared = model.score(df[x_cols], df[y_col])
-    return {"Coefficient": coef, "Intercept": intercept, "R-Squared": r_squared}
+        return model
+
+    def get_linear_regression_summary(self, model_name: str) -> str:
+        if model_name in self.model_summaries:
+            return str(self.model_summaries[model_name])
+        else:
+            return "Model not found."

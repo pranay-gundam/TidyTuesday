@@ -4,7 +4,7 @@ from typing import List, Tuple
 from pyfredapi import SeriesInfo
 from functools import reduce
 
-def reduce_formate_dfs(dfs: List[pd.DataFrame], infos: List[Tuple[str, SeriesInfo]], 
+def reduce_format_dfs(dfs: List[pd.DataFrame], infos: List[Tuple[str, SeriesInfo]], 
                        sources: List[str]) -> pd.DataFrame:
     if len(dfs) != len(infos) or len(dfs) != len(sources) or len(infos) != len(sources):
         raise ValueError("All lists must be the same length.")
@@ -61,8 +61,12 @@ def get_merged_dfs_raw(pull_info: List[Tuple[str, int]]) -> pd.DataFrame:
             raise ValueError("Source not recognized.")
         
     
-    return reduce_formate_dfs(dfs, infos, sources)
+    return reduce_format_dfs(dfs, infos, sources)
 
-def get_merged_dfs_dense(pull_info: List[Tuple[str, int]]) -> Tuple[pd.DataFrame, pd.DataFrame]:
+def get_merged_dfs_dense(pull_info: List[Tuple[str, int]], base_com_rows: int = 0) -> Tuple[pd.DataFrame, pd.DataFrame]:
     raw = get_merged_dfs_raw(pull_info)
+    
+    while raw.dropna().shape[0] < base_com_rows:
+        raw = get_merged_dfs_raw(pull_info)
+    
     return raw, raw.dropna()
