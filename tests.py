@@ -35,10 +35,28 @@ def running_basic_regression():
     print(raw)
     print("-------------------")
     print(clean)
+
+    regr = Regression_Wrapper(raw, clean, "date")
+    model = regr.run_linear_regression("test1", [3], 4)
+    print("-------------------")
+    print(type(regr.get_linear_regression_summary("test1")))
+    print(regr.get_linear_regression_summary("test1"))
     
+def saving_regressions():
+    raw, clean = get_merged_dfs_dense([("fred", 2)], 20)
+    print(raw)
+    print("-------------------")
+    print(clean)
+
+    regr = Regression_Wrapper(raw, clean, "date")
+    regr.run_linear_regression("test1", [3], 4)
+    regr.run_linear_regression("test2", [4], 3)
+    
+    regr.write_regression_results_to_csv("test1", "test1.csv")
+    regr.write_regression_results_to_csv("test2", "test1.csv")
 
 if __name__ == "__main__":
-    running_basic_regression()
+    saving_regressions()
 
 
 

@@ -26,6 +26,6 @@ To setup a `.env` file, simply create a new file in the same repository and name
 
 - Pulling the same dataframe twice (or more), unlikely but still possible
 - Handle cases with too little usable merged data
-- There still seem to be some edge case errors in the pulling random series (and iterating through a category tree), I've handled it so far by just retrying until something does work but this warrants another look
+- There still seem to be some edge case errors in the pulling random series (and iterating through a category tree), I've handled it so far by just retrying until something does work but this warrants another look.
 - `reduce_format_dfs` currently only works for data pulled from the fred api just because of the way it's handling the formatting. On this note, a lot of the other function I suspect are not generalized as well. This is probably an issue to handle when adding other data sources
 - There are instances in which you get dataframes whose dates don't coincide with eachother at all, as of right now I am just re-pulling data until I get two compatible series but still need to find a cleaner way to address this
