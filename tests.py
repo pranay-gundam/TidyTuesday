@@ -55,8 +55,18 @@ def saving_regressions():
     regr.write_regression_results_to_csv("test1", "test1.csv")
     regr.write_regression_results_to_csv("test2", "test1.csv")
 
+def save_plots():
+    raw, clean = get_merged_dfs_dense([("fred", 2)], 20)
+    print(raw)
+    print("-------------------")
+    print(clean)
+
+    regr = Regression_Wrapper(raw, clean, "date")
+    regr.run_linear_regression("test1", [3], 4)
+    regr.save_plot_png("test1", "test1.png")
+
 if __name__ == "__main__":
-    saving_regressions()
+    save_plots()
 
 
 

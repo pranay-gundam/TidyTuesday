@@ -20,6 +20,8 @@ old_folder_name="year_${old_year}_week_${old_week}"
 # Check if the folder exists and make a new one if it doesn't while moving the previous week to the archive
 if [ ! -d "$folder_name" ]; then
     mkdir "$folder_name"
+    mkdir "$folder_name/plots"
+    mkdir "$folder_name/tex_tables"
     mv "$old_folder_name" "Archive/$current_year/"
 fi
 

@@ -30,8 +30,8 @@ class Fred:
             random_child = random.choice(children)
             children = self.get_category_children(random_child["id"])["categories"]
         
-        if random_child == None:
-            raise ValueError("Provided category id not valid.")
+        if random_child is None:
+            return None, None
 
         id = random_child["id"]
         name = random_child["name"]
@@ -50,6 +50,10 @@ class Fred:
         
         while not series_list:
             category_id, _ = self.choose_random_category(category_id)
+            
+            while category_id is None:
+                category_id, _ = self.choose_random_category(category_id)
+
             series_list = self.get_category_series(category_id)
         
         series_keys = list(series_list.keys())

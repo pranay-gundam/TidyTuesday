@@ -3,6 +3,7 @@ import pandas as pd
 from typing import List
 import os
 import csv
+import seaborn as sns
 
 class Regression_Wrapper:
     def __init__(self, df_raw: pd.DataFrame, df_clean: pd.DataFrame, date_str: List[str] = ["date"]):
@@ -13,6 +14,9 @@ class Regression_Wrapper:
         self.models = dict()
         self.model_summaries = dict()
         self.plots = dict()
+        self.used_data = dict()
+        self.x_cols = dict()
+        self.y_col = dict()
 
     def get_raw(self) -> pd.DataFrame:
         return self.df_raw
@@ -23,9 +27,15 @@ class Regression_Wrapper:
     def run_linear_regression(self, model_name: str, x_cols: List[int], y_col: int, df_type: str = "clean") -> None:
         if df_type == "clean":
             df = self.df_clean
+            self.used_data[model_name] = "clean"
         else:
             df = self.df_raw
+            self.used_data[model_name] = "raw"
         
+
+        self.x_cols[model_name] = [df.columns[i] for i in x_cols]
+        self.y_col[model_name] = df.columns[y_col]
+
         X = df.iloc[:, x_cols]
         X = sm.add_constant(X)  # Adds a constant term to the predictor
         y = df.iloc[:, y_col]
@@ -85,3 +95,14 @@ class Regression_Wrapper:
         with open(filepath, mode='w') as f:
             f.write(self.model_summaries[model_name].as_latex())
     
+    def save_plot_png(self, model_name: str, filepath: str) -> None:
+        if len(self.x_cols[model_name]) != 1:
+            raise ValueError("Can only plot one x variable at a time.")
+        
+        if self.used_data[model_name] == "clean":
+            df = self.df_clean
+        else:
+            df = self.df_raw
+        
+        fig = sns.regplot(x=self.x_cols[model_name][0], y=self.y_col[model_name], data=df)
+        fig.get_figure().savefig(filepath)
