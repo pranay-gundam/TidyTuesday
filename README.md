@@ -17,8 +17,9 @@ To setup a `.env` file, simply create a new file in the same repository and name
 ## Features to be added
 
 - Pulling data from bloomberg
-- Automating the latex report creation
+- Automating the latex report creation, user only has to edit one file to finish the report
 - Script using `crontab` to automatically run reports each day
+  - automatically commit and push daily runs of the main script
 - Faster method to choose a random series from fred (iterating through all the categories each time from the root seems a bit extensive, could keep an ongoing list of series that I've tried and all available series and update this list periodically)
 - Adding more features to the regression such as detrending, or other applied micro stuff that I just don't really know yet. Could ask some applied micro friends what they think.
 
