@@ -16,6 +16,7 @@ To setup a `.env` file, simply create a new file in the same repository and name
 
 ## Features to be added
 
+- add toml files to talk about what packages are needed, there are some specific versions of pandas and numpy needed to make things work.
 - Pulling data from bloomberg
 - Automating the latex report creation, user only has to edit one file to finish the report
 - Script using `crontab` to automatically run reports each day
@@ -26,6 +27,7 @@ To setup a `.env` file, simply create a new file in the same repository and name
 ## Ongoing issues and edgecases to solve
 
 - Pulling the same dataframe twice (or more), unlikely but still possible
+- fix the virtual environment handling in the bash script
 - Handle cases with too little usable merged data
 - There still seem to be some edge case errors in the pulling random series (and iterating through a category tree), I've handled it so far by just retrying until something does work but this warrants another look.
 - `reduce_format_dfs` currently only works for data pulled from the fred api just because of the way it's handling the formatting. On this note, a lot of the other function I suspect are not generalized as well. This is probably an issue to handle when adding other data sources
