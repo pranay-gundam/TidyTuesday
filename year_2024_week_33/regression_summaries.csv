@@ -11,3 +11,11 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 [2] The condition number is large, 9.97e+04. This might indicate that there are
 strong multicollinearity or other numerical problems."
+2024-08-18,const,84.62261793168268,0.0026127611996784785,32.61375542367093,136.63148043969443,0.00012878139596950167,0.0030911515860847466,0.9561222237035715,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 8.45e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-18,value_fred_TOTALNSA,0.001287751391240301,0.9561222237035829,-0.0465158068873793,0.0490913096698599,0.00012878139596950167,0.0030911515860847466,0.9561222237035715,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 8.45e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
