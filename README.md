@@ -17,6 +17,7 @@ To setup a `.env` file, simply create a new file in the same repository and name
 ## Features to be added
 
 - add toml files to talk about what packages are needed, there are some specific versions of pandas and numpy needed to make things work.
+- Store and report the series information as well
 - Pulling data from bloomberg
 - Automating the latex report creation, user only has to edit one file to finish the report
 - Script using `crontab` to automatically run reports each day

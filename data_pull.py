@@ -61,6 +61,7 @@ class Fred:
 
         return series_list[series_id], self.get_series(series_id)
 
+    
 
 class Bloomberg:
     def __init__(self):

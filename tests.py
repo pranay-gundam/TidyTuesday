@@ -6,6 +6,7 @@ from regressions import *
 def choosing_series(fred):
     info1, df1 = fred.choose_random_series()
     print(info1.id, info1.title)
+    print(info1)
 
     info2, df2 = fred.choose_random_series()
     print(info2.id, info2.title)
@@ -25,13 +26,13 @@ def merging_series(fred):
     print(fin_df)
 
 def getting_random_formatted_data():
-    raw, clean = get_merged_dfs_dense([("fred", 3)])
+    raw, clean, _ = get_merged_dfs_dense([("fred", 3)])
     print(raw)
     print("-------------------")
     print(clean)
 
 def running_basic_regression():
-    raw, clean = get_merged_dfs_dense([("fred", 2)], 30)
+    raw, clean, _ = get_merged_dfs_dense([("fred", 2)], 30)
     print(raw)
     print("-------------------")
     print(clean)
@@ -43,7 +44,7 @@ def running_basic_regression():
     print(regr.get_linear_regression_summary("test1"))
     
 def saving_regressions():
-    raw, clean = get_merged_dfs_dense([("fred", 2)], 20)
+    raw, clean, _ = get_merged_dfs_dense([("fred", 2)], 20)
     print(raw)
     print("-------------------")
     print(clean)
@@ -56,7 +57,7 @@ def saving_regressions():
     regr.write_regression_results_to_csv("test2", "test1.csv")
 
 def save_plots():
-    raw, clean = get_merged_dfs_dense([("fred", 2)], 20)
+    raw, clean, _ = get_merged_dfs_dense([("fred", 2)], 20)
     print(raw)
     print("-------------------")
     print(clean)
@@ -65,8 +66,13 @@ def save_plots():
     regr.run_linear_regression("test1", [3], 4)
     regr.save_plot_png("test1", "test1.png")
 
-if __name__ == "__main__":
-    save_plots()
+def series_info_latex():
+    raw, clean, infos = get_merged_dfs_dense([("fred", 2)], 20)
+    print(infos)
 
+    write_series_info_latex(infos, "test.tex")
+
+if __name__ == "__main__":
+    series_info_latex()
 
 

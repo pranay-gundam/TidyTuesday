@@ -22,7 +22,7 @@ if [ ! -d "$folder_name" ]; then
     mkdir "$folder_name"
     mkdir "$folder_name/plots"
     mkdir "$folder_name/tex_tables"
-    mv "$old_folder_name" "Archive/$current_year/"
+    mv "$old_folder_name" "Archive/$current_year/week_${old_week}/"
 fi
 
 # Run the Python script with arguments
