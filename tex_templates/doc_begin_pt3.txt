@@ -1,0 +1,13 @@
+\author{Pranay Gundam}
+
+
+%-----------------------
+% Begin document
+%-----------------------
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{weekly_summary.tex}

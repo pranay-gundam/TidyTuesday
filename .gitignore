@@ -2,3 +2,4 @@
 *.html
 *.env
 __pycache__*
+*synctex.gz*

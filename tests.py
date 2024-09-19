@@ -1,6 +1,7 @@
 from data_pull import *
 from data_format import *
 from regressions import *
+from tex_format import *
 
 # Fred Testing
 def choosing_series(fred):
@@ -66,13 +67,14 @@ def save_plots():
     regr.run_linear_regression("test1", [3], 4)
     regr.save_plot_png("test1", "test1.png")
 
-def series_info_latex():
+def latex_testing():
     raw, clean, infos = get_merged_dfs_dense([("fred", 2)], 20)
-    print(infos)
+    cur_date = "2024-08-20"
 
-    write_series_info_latex(infos, "test.tex")
+    init_folder_tex("year_2024_week_34", cur_date)
+    daily_tex_update("year_2024_week_34", cur_date, infos)
 
 if __name__ == "__main__":
-    series_info_latex()
+    latex_testing()
 
 

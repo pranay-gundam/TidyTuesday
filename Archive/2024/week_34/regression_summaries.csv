@@ -1,0 +1,45 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2024-08-19,const,171.16046708219307,5.614335820543742e-13,143.71815451253516,198.60277965185097,0.045701602630714544,1.293037140616503,0.26548036864415453,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-08-19,value_fred_PATENT4NARREISSUE,33.435521047947795,0.2654803686441548,-26.895973016033608,93.7670151119292,0.045701602630714544,1.293037140616503,0.26548036864415453,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-08-20,const,-1.3246915773363328,0.0,-1.3561681705159214,-1.2932149841567442,0.940524851936753,136583.31943182804,0.0,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-08-20,value_fred_THREEFF9,1.0369705773238889,0.0,1.0314704016834189,1.0424707529643589,0.940524851936753,136583.31943182804,0.0,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-08-21,const,-421.6832296873433,3.1788000401926607e-09,-535.6991886556262,-307.66727071906047,0.8562245234269628,250.12214072310303,2.6988280010508453e-19,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.52e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-21,value_fred_RGDPOSHNA666NRUG,0.07557823847691661,2.69882800105087e-19,0.06593418873294357,0.08522228822088965,0.8562245234269628,250.12214072310303,2.6988280010508453e-19,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.52e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-22,const,28331.155498134685,7.014278029339915e-10,22158.974202725967,34503.33679354341,0.6355989761340137,45.349964180018,3.8081601340819696e-07,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.86e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-22,value_fred_PEAACT09015A647NCEN,1.7946980785740008,3.8081601340820115e-07,1.2468922804175357,2.342503876730466,0.6355989761340137,45.349964180018,3.8081601340819696e-07,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 6.86e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-23,const,7447.8778387255525,2.9763762103335577e-05,4284.944642421102,10610.811035030003,0.6055732360384299,55.27169677437905,8.910869117081171e-09,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.14e+10. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-23,value_fred_EMISSCO2VMGACBA,1.1101495096751402e-05,8.910869117081613e-09,8.073060817885015e-06,1.4129929375617788e-05,0.6055732360384299,55.27169677437905,8.910869117081171e-09,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.14e+10. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-24,const,6121.331790945321,0.0036909106668553435,2067.9202203016607,10174.74336158898,0.025263846489051334,1.5810377303449668,0.21340406463327496,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.3e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-24,value_fred_EUMXSLNQ,28.093404973595206,0.21340406463327252,-16.583338870529573,72.77014881771998,0.025263846489051334,1.5810377303449668,0.21340406463327496,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.3e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-08-25,const,100.53769444636012,1.4257146822226606e-63,100.26003976512774,100.8153491275925,0.0044086422308246,0.12841676828170764,0.722674795915053,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-08-25,value_fred_SFTPAGRM158SFRBSF,-0.7369360371194347,0.7226747959150337,-4.942856009066483,3.4689839348276132,0.0044086422308246,0.12841676828170764,0.722674795915053,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."

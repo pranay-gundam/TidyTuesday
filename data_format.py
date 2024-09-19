@@ -70,27 +70,3 @@ def get_merged_dfs_dense(pull_info: List[Tuple[str, int]], base_com_rows: int = 
         raw, infos = get_merged_dfs_raw(pull_info)
     
     return raw, raw.dropna(), infos
-
-def write_series_info_latex(series_info: List[SeriesInfo], filepath: str) -> None:
-        with open(filepath, "w") as f:
-            for series in series_info:
-                f.write("\\begin{table}[H]\n")
-                f.write("\\centering\n")
-                f.write("\\begin{tabular}{|c|c|}\n")
-                
-                f.write("\\hline\n")
-                f.write("Series Information & \\\\ \n")
-                f.write("\\hline\n")
-                f.write(f"\\textbf{{series id}} & {series.id}\\\\ \n")
-                f.write(f"\\textbf{{title}} & {series.title}\\\\ \n")
-                f.write(f"\\textbf{{frequency}} & {series.frequency}\\\\ \n")
-                f.write(f"\\textbf{{units}} & {series.units}\\\\ \n")
-                f.write(f"\\textbf{{seasonal adjustment}} & {series.seasonal_adjustment}\\\\ \n")
-                f.write(f"\\textbf{{observation start}} & {series.observation_start}\\\\ \n")
-                f.write(f"\\textbf{{observation end}} & {series.observation_end}\\\\ \n")
-                f.write(f"\\textbf{{popularity}} & {series.popularity}\\\\ \n")
-                f.write(f"\\textbf{{notes}} & {series.notes}\\\\ \n")
-                
-                f.write("\\hline\n")
-                f.write("\\end{tabular}\n")
-                f.write("\\end{table}\n")
