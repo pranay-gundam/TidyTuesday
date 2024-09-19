@@ -21,7 +21,7 @@ def main(cur_date, file_path, cur_week = None):
 if __name__ == "__main__":
     # Read in arguments
     args = sys.argv[1:]  
-    if len(args) >= 2:
+    if len(args) > 2:
         main(args[0], args[1], args[2])
     else:
         main(args[0], args[1])
