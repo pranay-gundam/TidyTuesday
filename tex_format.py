@@ -61,9 +61,8 @@ def daily_tex_update(file_path: str, cur_date: str, infos: List[SeriesInfo]) -> 
         f.write("\section{Date: " + cur_date + "}\n")
         for table in series_infos:
             f.write(table)
-        f.write("\\subsection{Regression Table}\n")
+        f.write("\\subsection{\subsection{Regression Tables and Plots}}\n")
         f.write("\\input{" + f"tex_tables/regression_table_{cur_date}.tex" + "}\n\n")
-        f.write("\\subsection{Regression Plot}\n")
         f.write("\\begin{figure}\n")
         f.write("\\centering\n")
         f.write("\\includegraphics[scale = 0.9]{" + f"plots/plot_{cur_date}.png" + "}\n")
