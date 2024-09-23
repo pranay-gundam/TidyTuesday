@@ -1,0 +1,5 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2024-09-23,const,3.332365936043193,4.3270226267480586e-05,1.879633538048982,4.785098334037404,0.4439066990293836,28.737338027926036,4.9709818413554345e-06,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-09-23,value_fred_ACOILWTICO,0.06988800342674083,4.970981841355457e-06,0.043447638445192706,0.09632836840828896,0.4439066990293836,28.737338027926036,4.9709818413554345e-06,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
