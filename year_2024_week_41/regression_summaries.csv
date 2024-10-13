@@ -23,3 +23,11 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 [2] The condition number is large, 1.01e+05. This might indicate that there are
 strong multicollinearity or other numerical problems."
+2024-10-11,const,1.3795296419621708,6.419306784263394e-12,1.1941736702800274,1.564885613644314,0.48781367567324097,17.143460777989375,0.0006143599730403774,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-11,value_fred_BNEMFT01KRQ460S,-0.03281123888640968,0.0006143599730403743,-0.049460053478910554,-0.016162424293908805,0.48781367567324097,17.143460777989375,0.0006143599730403774,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-12,const,-6.54827419013128,0.18444910272057105,-16.283272726086874,3.186724345824314,0.02854193798849025,2.3210606708249344,0.13162620253417076,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-12,value_fred_EEMMXSSNQ,1.1105832390669854,0.131626202534171,-0.34038927928567664,2.5615557574196473,0.02854193798849025,2.3210606708249344,0.13162620253417076,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
