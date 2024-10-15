@@ -1,0 +1,5 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2024-10-15,const,84.90994852497047,6.594548054068484e-16,72.39471872760326,97.42517832233769,0.19507620735233155,8.724730873693945,0.005502244684278425,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-15,value_fred_MORTGAGE15W,3.034980454509192,0.005502244684278245,0.9511232334248616,5.1188376755935225,0.19507620735233155,8.724730873693945,0.005502244684278425,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
