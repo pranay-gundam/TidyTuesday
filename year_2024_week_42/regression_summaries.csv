@@ -3,3 +3,7 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2024-10-15,value_fred_MORTGAGE15W,3.034980454509192,0.005502244684278245,0.9511232334248616,5.1188376755935225,0.19507620735233155,8.724730873693945,0.005502244684278425,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-16,const,6.301542721549804,2.9614209512758223e-36,5.558210271295534,7.044875171804074,0.3096564496084885,67.73167340284998,8.12091293997487e-14,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-16,value_fred_ATNHPIUS33140Q,-0.02035294429843249,8.120912939975261e-14,-0.02523917632324765,-0.015466712273617327,0.3096564496084885,67.73167340284998,8.12091293997487e-14,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
