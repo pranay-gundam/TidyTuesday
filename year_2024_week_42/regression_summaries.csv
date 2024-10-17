@@ -7,3 +7,11 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2024-10-16,value_fred_ATNHPIUS33140Q,-0.02035294429843249,8.120912939975261e-14,-0.02523917632324765,-0.015466712273617327,0.3096564496084885,67.73167340284998,8.12091293997487e-14,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-17,const,80.70071752977162,1.7768569211141472e-27,67.96320641258826,93.43822864695498,0.5178214579775277,239.484288630179,3.516494913567824e-37,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.02e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-10-17,value_fred_EXP0017,0.03755878445778848,3.51649491356725e-37,0.03277595949254598,0.04234160942303098,0.5178214579775277,239.484288630179,3.516494913567824e-37,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.02e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
