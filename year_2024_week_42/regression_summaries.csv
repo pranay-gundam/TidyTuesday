@@ -19,3 +19,7 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2024-10-18,value_fred_BRVSLV02JPQ460S,-1.7169465955287049,3.807123750871259e-15,-2.078975386242387,-1.3549178048150223,0.49092637369724446,88.72042087147115,3.807123750871154e-15,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-19,const,15044.404314873818,2.992280604395881e-08,10975.726060613793,19113.082569133843,0.3212138456655005,13.250104795452057,0.0010930885712748428,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-10-19,value_fred_CSHICPROA156NRUG,-35034.30258605981,0.001093088571274842,-54749.453297292814,-15319.151874826814,0.3212138456655005,13.250104795452057,0.0010930885712748428,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
