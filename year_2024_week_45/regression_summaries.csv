@@ -1,0 +1,9 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2024-11-04,const,6186848.092999137,6.480228266807687e-44,5539294.235541074,6834401.9504572,0.07837581648765646,14.797129147457497,0.0001678116623525278,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.73e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-11-04,value_fred_DTBOVXDFBANM,-365.568370607296,0.0001678116623525292,-553.1365393710994,-178.00020184349265,0.07837581648765646,14.797129147457497,0.0001678116623525278,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.73e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
