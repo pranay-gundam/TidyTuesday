@@ -1,0 +1,9 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2024-12-02,const,-17.65954373002058,0.267824626882561,-49.684909897238875,14.365822437197714,0.7503222053941649,81.13937235637933,1.2717020461734597e-09,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.01e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2024-12-02,value_fred_CUUSX000SETA,1.3099496918896607,1.2717020461734413e-09,1.0115624296082553,1.6083369541710661,0.7503222053941649,81.13937235637933,1.2717020461734597e-09,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.01e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
