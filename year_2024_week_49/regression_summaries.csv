@@ -19,3 +19,7 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 [2] The condition number is large, 2.3e+05. This might indicate that there are
 strong multicollinearity or other numerical problems."
+2024-12-08,const,76.13633305736936,2.3924564074954705e-55,69.14213813835391,83.1305279763848,0.6915275958823949,481.98292985077273,8.038537259953136e-57,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-12-08,value_fred_BOPXSVN,1.1834954620870533,8.038537259953496e-57,1.0772402066762161,1.2897507174978904,0.6915275958823949,481.98292985077273,8.038537259953136e-57,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
