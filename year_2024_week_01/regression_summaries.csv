@@ -1,0 +1,5 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2024-12-30,const,1.7795880528245949,0.0008018558548647244,0.7424576963041234,2.816718409345066,0.008791506084647183,5.064474331232106,0.02480087359048386,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2024-12-30,value_fred_MORTMRGN1NC,-0.43185312427835176,0.02480087359048448,-0.8087638521744716,-0.05494239638223192,0.008791506084647183,5.064474331232106,0.02480087359048386,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
