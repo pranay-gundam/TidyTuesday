@@ -3,3 +3,11 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2025-01-21,value_fred_DSBASEN,0.17361538407256621,5.796534861387608e-32,0.15777623893023912,0.1894545292148933,0.8788853759522097,478.93832201433634,5.796534861387508e-32,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2025-01-22,const,-104.4915078703185,0.35902532905136175,-330.24267676759,121.259661026953,0.5893209429509738,99.01441129188841,5.720559297233908e-15,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.81e+06. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2025-01-22,value_fred_NCBCBIA027N,0.0005276041734352878,5.7205592972339004e-15,0.00042182746838374677,0.0006333808784868289,0.5893209429509738,99.01441129188841,5.720559297233908e-15,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.81e+06. This might indicate that there are
+strong multicollinearity or other numerical problems."
