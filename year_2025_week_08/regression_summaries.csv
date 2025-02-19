@@ -1,0 +1,5 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2025-02-19,const,199.25471231573965,0.001289661527746508,88.69075201459034,309.818672616889,0.2300750578644981,5.677730204843941,0.027780202441110704,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2025-02-19,value_fred_JTUTSR,-30.42278887303861,0.027780202441110683,-57.14582920899898,-3.6997485370782357,0.2300750578644981,5.677730204843941,0.027780202441110704,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
