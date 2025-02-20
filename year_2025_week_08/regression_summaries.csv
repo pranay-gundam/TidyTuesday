@@ -3,3 +3,7 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2025-02-19,value_fred_JTUTSR,-30.42278887303861,0.027780202441110683,-57.14582920899898,-3.6997485370782357,0.2300750578644981,5.677730204843941,0.027780202441110704,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2025-02-20,const,0.6079788894605258,2.3720960251958703e-31,0.5186686096684187,0.697289169252633,0.0015263986156682785,0.3882979458267123,0.5337545391512343,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2025-02-20,value_fred_WHLSLRMPCIMSA,-0.03552637673086612,0.5337545391512428,-0.14780336001506622,0.07675060655333396,0.0015263986156682785,0.3882979458267123,0.5337545391512343,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
