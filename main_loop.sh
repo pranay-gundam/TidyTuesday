@@ -12,29 +12,38 @@ fi
 # Get the current week and year and date
 current_week=$(date +%V)
 current_year=$(date +%Y)
-
-old_week=$(date -d "last week" +%V)
-old_year=$(date -d "last week" +%Y)
-
 current_date=$(date +%Y-%m-%d)
 
 # Define the folder name
 folder_name="year_${current_year}_week_${current_week}"
-old_folder_name="year_${old_year}_week_${old_week}"
 
-# Check if the folder exists and make a new one if it doesn't while moving the previous week to the archive
 if [ ! -d "$folder_name" ]; then
+    is_new_week=true
     mkdir -p "$folder_name/plots" "$folder_name/tex_tables" "$folder_name/tex_things"
+else
+    is_new_week=false
+fi
 
-    if [ -d "$old_folder_name" ]; then
-        mkdir -p "Archive/$old_year"
-        mv "$old_folder_name" "Archive/$old_year/week_${old_week}"
-    fi
+# Archive every week folder sitting at the repo root that isn't the current week --
+# this sweeps up both the week that just ended and any older leftover folders that
+# were never archived (e.g. weeks from before this automation existed).
+shopt -s nullglob
+for dir in year_*_week_*/; do
+    dir="${dir%/}"
+    [ "$dir" = "$folder_name" ] && continue
 
-    # Run the Python script with arguments
+    week_year="${dir#year_}"
+    week_year="${week_year%%_week_*}"
+    week_num="${dir##*_week_}"
+
+    mkdir -p "Archive/$week_year"
+    mv "$dir" "Archive/$week_year/week_${week_num}"
+done
+shopt -u nullglob
+
+if [ "$is_new_week" = true ]; then
     python3 main_loop.py "$current_date" "$folder_name" "$current_week"
 else
-    # Run the Python script with arguments
     python3 main_loop.py "$current_date" "$folder_name"
 fi
 
