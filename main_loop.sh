@@ -1,8 +1,13 @@
 #!/bin/bash
+set -euo pipefail
+cd "$(dirname "${BASH_SOURCE[0]}")"
 
-# Choosing the right virtual environment
-deactivate
-source .venv_tidytuesday/bin/activate
+# Activate the local venv only for local/manual runs. In GitHub Actions,
+# dependencies are installed directly onto the runner (see
+# .github/workflows/daily.yml), so there's no venv to activate.
+if [ -z "${GITHUB_ACTIONS:-}" ] && [ -f ".venv_tidytuesday/bin/activate" ]; then
+    source .venv_tidytuesday/bin/activate
+fi
 
 # Get the current week and year and date
 current_week=$(date +%V)
@@ -19,17 +24,25 @@ old_folder_name="year_${old_year}_week_${old_week}"
 
 # Check if the folder exists and make a new one if it doesn't while moving the previous week to the archive
 if [ ! -d "$folder_name" ]; then
-    mkdir "$folder_name"
-    mkdir "$folder_name/plots"
-    mkdir "$folder_name/tex_tables"
-    mkdir "$folder_name/tex_things"
-    mv "$old_folder_name" "Archive/$current_year/week_${old_week}/"
-    
+    mkdir -p "$folder_name/plots" "$folder_name/tex_tables" "$folder_name/tex_things"
+
+    if [ -d "$old_folder_name" ]; then
+        mkdir -p "Archive/$old_year"
+        mv "$old_folder_name" "Archive/$old_year/week_${old_week}"
+    fi
+
     # Run the Python script with arguments
     python3 main_loop.py "$current_date" "$folder_name" "$current_week"
 else
     # Run the Python script with arguments
-    python3 main_loop.py "$current_date" "$folder_name" 
+    python3 main_loop.py "$current_date" "$folder_name"
 fi
 
-
+# Compile the current week's PDF, if a LaTeX toolchain is available. Best-effort:
+# a missing/broken LaTeX install shouldn't fail the whole daily run.
+if command -v latexmk >/dev/null 2>&1; then
+    (cd "$folder_name" && latexmk -pdf -interaction=nonstopmode -halt-on-error main_file.tex) \
+        || echo "Warning: PDF compile failed for $folder_name" >&2
+else
+    echo "latexmk not found; skipping PDF compile for $folder_name" >&2
+fi

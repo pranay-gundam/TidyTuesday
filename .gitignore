@@ -3,3 +3,10 @@
 *.env
 __pycache__*
 *synctex.gz*
+.venv_tidytuesday/
+*.aux
+*.log
+*.out
+*.toc
+*.fdb_latexmk
+*.fls

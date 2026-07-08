@@ -3,10 +3,11 @@ from data_format import *
 from data_pull import *
 from regressions import *
 from tex_format import *
+from ai_summary import generate_weekly_summary
 
 def main(cur_date, file_path, cur_week = None):
     raw, clean, infos = get_merged_dfs_dense([("fred", 2)], 20)
-    
+
     regr = Regression_Wrapper(raw, clean, "date")
     regr.run_linear_regression(cur_date, [3], 4)
     regr.write_regression_results_to_csv(cur_date, f"{file_path}/regression_summaries.csv")
@@ -17,6 +18,8 @@ def main(cur_date, file_path, cur_week = None):
         init_folder_tex(file_path, cur_date)
 
     daily_tex_update(file_path, cur_date, infos)
+
+    generate_weekly_summary(file_path)
 
 if __name__ == "__main__":
     # Read in arguments
