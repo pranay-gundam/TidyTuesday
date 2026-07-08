@@ -24,7 +24,7 @@ SYSTEM_PROMPT = (
     "descriptions involved.\n\n"
     "Write 2-4 short paragraphs in plain, non-technical language summarizing what was tried "
     "this week and anything amusing, surprising, or notably strong/weak about the "
-    "relationships found. Explicitly remind the reader that these are randomly paired series "
+    "relationships found. Although you should point out and theorize about any strong relationships that are found, you shoul also explicitly remind the reader that these are randomly paired series "
     "with no causal or rigorous statistical claim intended -- spurious correlation is the "
     "norm, not the exception, for this project.\n\n"
     "Output plain text only (no LaTeX commands, no markdown, no headers) -- it will be "
