@@ -4,6 +4,7 @@
 __pycache__*
 *synctex.gz*
 .venv_tidytuesday/
+digest.txt
 *.aux
 *.log
 *.out

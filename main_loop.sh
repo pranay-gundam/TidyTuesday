@@ -39,10 +39,16 @@ else
 fi
 
 # Compile the current week's PDF, if a LaTeX toolchain is available. Best-effort:
-# a missing/broken LaTeX install shouldn't fail the whole daily run.
+# a missing/broken LaTeX install shouldn't fail the whole daily run. Appends a
+# status line to digest.txt (written by main_loop.py) for the daily notification.
 if command -v latexmk >/dev/null 2>&1; then
-    (cd "$folder_name" && latexmk -pdf -interaction=nonstopmode -halt-on-error main_file.tex) \
-        || echo "Warning: PDF compile failed for $folder_name" >&2
+    if (cd "$folder_name" && latexmk -pdf -interaction=nonstopmode -halt-on-error main_file.tex); then
+        echo "**PDF:** compiled" >> digest.txt
+    else
+        echo "Warning: PDF compile failed for $folder_name" >&2
+        echo "**PDF:** compile failed -- see workflow logs" >> digest.txt
+    fi
 else
     echo "latexmk not found; skipping PDF compile for $folder_name" >&2
+    echo "**PDF:** skipped (latexmk not installed)" >> digest.txt
 fi

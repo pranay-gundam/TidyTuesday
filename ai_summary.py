@@ -79,11 +79,14 @@ def _fallback_weekly_summary_tex(reason: Optional[str] = None) -> str:
     )
 
 
-def generate_weekly_summary(file_path: str) -> None:
+def generate_weekly_summary(file_path: str) -> bool:
     """Regenerate weekly_summary.tex for the given week folder using Claude, based on
     all regression results and series descriptions recorded so far this week. Safe to
     call every day -- it overwrites the file each time so it always reflects the
     week-to-date, and by the time the week ends the final version is already in place.
+
+    Returns True if Claude actually wrote the summary, False if a fallback
+    (disclaimer-only) file was written instead.
     """
     weekly_summary_path = os.path.join(file_path, "weekly_summary.tex")
 
@@ -92,14 +95,14 @@ def generate_weekly_summary(file_path: str) -> None:
         print("ANTHROPIC_API_KEY not set; skipping AI weekly summary.", file=sys.stderr)
         with open(weekly_summary_path, "w") as f:
             f.write(_fallback_weekly_summary_tex("no ANTHROPIC_API_KEY configured"))
-        return
+        return False
 
     context = _read_week_context(file_path)
     if not context.strip():
         print(f"No regression data found in {file_path}; skipping AI weekly summary.", file=sys.stderr)
         with open(weekly_summary_path, "w") as f:
             f.write(_fallback_weekly_summary_tex("no data recorded yet this week"))
-        return
+        return False
 
     try:
         client = anthropic.Anthropic()
@@ -116,7 +119,7 @@ def generate_weekly_summary(file_path: str) -> None:
         print(f"AI weekly summary generation failed: {exc}", file=sys.stderr)
         with open(weekly_summary_path, "w") as f:
             f.write(_fallback_weekly_summary_tex(str(exc)))
-        return
+        return False
 
     with open(weekly_summary_path, "w") as f:
         f.write("\\section{Weekly Summary}\n\n")
@@ -124,3 +127,5 @@ def generate_weekly_summary(file_path: str) -> None:
         f.write("\n")
         f.write(_escape_latex(summary_text))
         f.write("\n")
+
+    return True

@@ -68,8 +68,17 @@ for how to obtain each.
    runs and overwrites daily, the file is always current and no special end-of-week detection is
    needed. On any failure (missing key, API/network error, no data yet) it writes a fallback
    disclaimer-only file instead of raising, so a bad AI call never breaks the LaTeX build or the
-   rest of the daily pipeline. Model output text is LaTeX-escaped before insertion — never write
-   raw model output into a `.tex` file without going through `_escape_latex`.
+   rest of the daily pipeline. Returns `True`/`False` (AI summary vs. fallback) so
+   `main_loop.py` can report it in the daily digest. Model output text is LaTeX-escaped before
+   insertion — never write raw model output into a `.tex` file without going through
+   `_escape_latex`.
+6. `main_loop.py`'s `build_digest(...)` assembles a short markdown summary of the day's run
+   (series pulled, regression R²/p-value, AI summary status) and writes it to `digest.txt` at the
+   repo root (gitignored, overwritten every run). `main_loop.sh` appends a PDF-compile status
+   line to that same file after the Python step finishes. The GitHub Actions workflow posts its
+   contents as a comment on a persistent "Daily TidyTuesday Runs" issue (created on first use) —
+   see the workflow's last step for the failure-path fallback when `digest.txt` never got
+   written.
 
 **Week-folder lifecycle** (`main_loop.sh`, the entry point for both manual and automated runs):
 computes the current ISO year/week, and if `year_<YYYY>_week_<WW>/` doesn't exist yet, creates it

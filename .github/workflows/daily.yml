@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 jobs:
   run:
@@ -52,3 +53,31 @@ jobs:
             git commit -m "daily update $(date +%-m/%-d)"
             git push
           fi
+
+      - name: Post daily digest to GitHub issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -f digest.txt ]; then
+            BODY_FILE=digest.txt
+          else
+            BODY_FILE=/tmp/failure_digest.txt
+            {
+              echo "## Daily run — $(date +%Y-%m-%d)"
+              echo ""
+              echo "**Status:** the pipeline failed before a digest could be generated -- see the [workflow run](${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}) for details."
+            } > "$BODY_FILE"
+          fi
+
+          ISSUE_NUMBER=$(gh issue list --state all --limit 100 --json number,title \
+            --jq '.[] | select(.title=="Daily TidyTuesday Runs") | .number' | head -n1)
+
+          if [ -z "$ISSUE_NUMBER" ]; then
+            ISSUE_URL=$(gh issue create \
+              --title "Daily TidyTuesday Runs" \
+              --body "Tracking issue for daily automated runs. Each comment below is one day's digest.")
+            ISSUE_NUMBER=$(echo "$ISSUE_URL" | grep -oE '[0-9]+$')
+          fi
+
+          gh issue comment "$ISSUE_NUMBER" --body-file "$BODY_FILE"

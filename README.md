@@ -68,6 +68,12 @@ GitHub Actions was chosen over a local cron job or Windows Task Scheduler specif
 
 Every generated summary is preceded by a visible disclaimer box in the compiled PDF stating it was written by Claude and hasn't been reviewed by a human. If the API call fails for any reason (missing key, network issue, etc.), the rest of the daily pipeline still completes — `weekly_summary.tex` just falls back to the disclaimer box with a note that generation didn't succeed that day, rather than breaking the LaTeX build.
 
+The exact call is in `ai_summary.py`: `model="claude-opus-4-8"`, `max_tokens=1500`, a system prompt instructing a short, non-technical recap that explicitly disclaims causal/statistical significance, and a user message containing that week's `regression_summaries.csv` plus every `tex_things/day_*.tex` written so far (typically a couple thousand characters). At that size this runs to roughly $0.01–0.02/day. It's worth setting a spend limit anyway — Anthropic Console → **Settings → Limits** (or **Billing**) lets you cap monthly spend; there's no API for this, it's account-level.
+
+## Daily notification
+
+Each run posts a comment to a persistent GitHub issue titled **"Daily TidyTuesday Runs"** (created automatically on first use) summarizing that day: which series were pulled, the regression's R²/p-value, whether the AI weekly summary succeeded, and whether the PDF compiled. If the pipeline fails before producing a digest, it still posts a comment linking to the failed workflow run instead of going silent. You'll see these show up as normal GitHub notifications (issue comment emails) as long as notifications are enabled for this repo — no extra secrets or SMTP setup needed, since it uses the same token already granted to the workflow.
+
 ## Features to be added
 
 - Store and report the series information as well (currently it's only rendered into the daily `.tex` files, not kept in structured form)
