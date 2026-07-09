@@ -2,6 +2,8 @@ from typing import List, Tuple
 from pyfredapi import SeriesInfo
 from datetime import datetime, timedelta
 
+from latex_utils import escape_latex
+
 def init_folder_tex(filepath: str, cur_date: str) -> None:
     filepath_week_sum = f"{filepath}/weekly_summary.tex"
     filepath_week_main = f"{filepath}/main_file.tex"
@@ -72,10 +74,15 @@ def daily_tex_update(file_path: str, cur_date: str, infos: List[SeriesInfo]) -> 
 
 def generate_series_info_latex(series: SeriesInfo) -> str:
     
+    title = escape_latex(series.title)
+    frequency = escape_latex(series.frequency)
+    units = escape_latex(series.units)
+    seasonal_adjustment = escape_latex(series.seasonal_adjustment)
+
     latex_str = f"\\noindent \\textbf{{Series ID: {series.id}}} \n\n"
-    latex_str += f"\\noindent This series is titled {series.title} and has a frequency of {series.frequency}." 
-    latex_str += f" The units are {series.units} and the seasonal adjustment is {series.seasonal_adjustment}."
-    latex_str += f"The observation start date is {series.observation_start} and the observation end date is {series.observation_end}." 
+    latex_str += f"\\noindent This series is titled {title} and has a frequency of {frequency}."
+    latex_str += f" The units are {units} and the seasonal adjustment is {seasonal_adjustment}."
+    latex_str += f"The observation start date is {series.observation_start} and the observation end date is {series.observation_end}."
     latex_str += f"The popularity of this series is {series.popularity}. \\\\ \n\n"
 
     return latex_str

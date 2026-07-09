@@ -6,6 +6,8 @@ from typing import Optional
 import anthropic
 from dotenv import load_dotenv
 
+from latex_utils import escape_latex
+
 MODEL = "claude-opus-4-8"
 
 DISCLAIMER = (
@@ -35,24 +37,6 @@ SYSTEM_PROMPT = (
     "inserted directly into a LaTeX document body as prose paragraphs separated by blank lines."
 )
 
-LATEX_SPECIAL_CHARS = {
-    "\\": r"\textbackslash{}",
-    "%": r"\%",
-    "$": r"\$",
-    "&": r"\&",
-    "#": r"\#",
-    "_": r"\_",
-    "{": r"\{",
-    "}": r"\}",
-    "~": r"\textasciitilde{}",
-    "^": r"\textasciicircum{}",
-}
-
-
-def _escape_latex(text: str) -> str:
-    return "".join(LATEX_SPECIAL_CHARS.get(ch, ch) for ch in text)
-
-
 def _read_week_context(file_path: str) -> str:
     parts = []
 
@@ -78,7 +62,7 @@ def _fallback_weekly_summary_tex(reason: Optional[str] = None) -> str:
     return (
         "\\section{Weekly Summary}\n\n"
         "\\begin{tcolorbox}[colback=yellow!10,colframe=black!50,title=AI-Generated Content]\n"
-        f"\\noindent {_escape_latex(note)}\n"
+        f"\\noindent {escape_latex(note)}\n"
         "\\end{tcolorbox}\n"
     )
 
@@ -129,7 +113,7 @@ def generate_weekly_summary(file_path: str) -> bool:
         f.write("\\section{Weekly Summary}\n\n")
         f.write(DISCLAIMER)
         f.write("\n")
-        f.write(_escape_latex(summary_text))
+        f.write(escape_latex(summary_text))
         f.write("\n")
 
     return True
