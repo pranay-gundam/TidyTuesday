@@ -2,7 +2,7 @@
 *.html
 *.env
 __pycache__*
-*synctex.gz*
+*synctex*
 .venv_tidytuesday/
 digest.txt
 *.aux
