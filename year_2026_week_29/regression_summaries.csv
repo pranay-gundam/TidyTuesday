@@ -1,0 +1,5 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2026-07-13,const,-33.49278996484627,0.4010467974386638,-114.47153704026296,47.485957110570425,0.4069926404202243,15.785353382963994,0.0006014232488503757,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-07-13,value_fred_IPUCN2211U110000000,2.284572307368117,0.0006014232488503751,1.0950670413617212,3.4740775733745126,0.4069926404202243,15.785353382963994,0.0006014232488503757,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
