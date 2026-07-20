@@ -17,6 +17,7 @@ class Regression_Wrapper:
         self.used_data = dict()
         self.x_cols = dict()
         self.y_col = dict()
+        self.detrended_dfs = dict()
 
     def get_raw(self) -> pd.DataFrame:
         return self.df_raw
@@ -42,6 +43,49 @@ class Regression_Wrapper:
         
         model = sm.OLS(y, X).fit()
         
+        self.models[model_name] = model
+        self.model_summaries[model_name] = model.summary()
+
+    def run_detrended_regression(self, model_name: str, x_cols: List[int], y_col: int, df_type: str = "clean") -> None:
+        """Same relationship as run_linear_regression, but with each series' linear
+        time trend regressed out first. Two long series that both drift upward (or
+        downward) over time will show a "significant" raw relationship purely from
+        sharing that drift -- this regresses x and y on a date trend, keeps only the
+        residuals, and relates those. A relationship that survives is much less likely
+        to be a trend artifact.
+        """
+        if len(x_cols) != 1:
+            raise ValueError("Can only detrend one x variable at a time.")
+
+        if df_type == "clean":
+            df = self.df_clean
+            self.used_data[model_name] = "clean"
+        else:
+            df = self.df_raw
+            self.used_data[model_name] = "raw"
+
+        date_col = self.date_str[0] if isinstance(self.date_str, list) else self.date_str
+        trend = sm.add_constant(pd.to_datetime(df[date_col]).map(pd.Timestamp.toordinal))
+
+        x_col_name = df.columns[x_cols[0]]
+        y_col_name = df.columns[y_col]
+        detrended_x_col = f"{x_col_name}_detrended"
+        detrended_y_col = f"{y_col_name}_detrended"
+
+        detrended_df = pd.DataFrame({
+            detrended_x_col: df[x_col_name] - sm.OLS(df[x_col_name], trend).fit().fittedvalues,
+            detrended_y_col: df[y_col_name] - sm.OLS(df[y_col_name], trend).fit().fittedvalues,
+        })
+
+        self.detrended_dfs[model_name] = detrended_df
+        self.x_cols[model_name] = [detrended_x_col]
+        self.y_col[model_name] = detrended_y_col
+
+        X = sm.add_constant(detrended_df[[detrended_x_col]])
+        y = detrended_df[detrended_y_col]
+
+        model = sm.OLS(y, X).fit()
+
         self.models[model_name] = model
         self.model_summaries[model_name] = model.summary()
 
@@ -99,10 +143,12 @@ class Regression_Wrapper:
         if len(self.x_cols[model_name]) != 1:
             raise ValueError("Can only plot one x variable at a time.")
         
-        if self.used_data[model_name] == "clean":
+        if model_name in self.detrended_dfs:
+            df = self.detrended_dfs[model_name]
+        elif self.used_data[model_name] == "clean":
             df = self.df_clean
         else:
             df = self.df_raw
-        
+
         fig = sns.regplot(x=self.x_cols[model_name][0], y=self.y_col[model_name], data=df)
         fig.get_figure().savefig(filepath)

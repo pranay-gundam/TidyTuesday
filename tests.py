@@ -53,9 +53,11 @@ def saving_regressions():
     regr = Regression_Wrapper(raw, clean, "date")
     regr.run_linear_regression("test1", [3], 4)
     regr.run_linear_regression("test2", [4], 3)
-    
+    regr.run_detrended_regression("test1_detrended", [3], 4)
+
     regr.write_regression_results_to_csv("test1", "test1.csv")
     regr.write_regression_results_to_csv("test2", "test1.csv")
+    regr.write_regression_results_to_csv("test1_detrended", "test1.csv")
 
 def save_plots():
     raw, clean, _ = get_merged_dfs_dense([("fred", 2)], 20)
@@ -66,6 +68,9 @@ def save_plots():
     regr = Regression_Wrapper(raw, clean, "date")
     regr.run_linear_regression("test1", [3], 4)
     regr.save_plot_png("test1", "test1.png")
+
+    regr.run_detrended_regression("test1_detrended", [3], 4)
+    regr.save_plot_png("test1_detrended", "test1_detrended.png")
 
 def latex_testing():
     raw, clean, infos = get_merged_dfs_dense([("fred", 2)], 20)

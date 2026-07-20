@@ -54,24 +54,36 @@ for how to obtain each.
 3. `regressions.py` — `Regression_Wrapper` holds both the raw and NaN-dropped ("clean") merged
    frames, runs an OLS via `statsmodels`, and has methods to dump the regression summary to CSV
    (`regression_summaries.csv`, appended to across the whole week) and LaTeX, and to save a
-   `seaborn.regplot` PNG.
+   `seaborn.regplot` PNG. Every day, two regressions are run for the same series pair, sharing a
+   naming convention distinguished by `model_name`: the raw regression (`model_name` = the date,
+   e.g. `2026-07-20`) via `run_linear_regression`, and a detrended regression
+   (`model_name` = the date + `_detrended`, e.g. `2026-07-20_detrended`) via
+   `run_detrended_regression`, which regresses each series on a date trend first and relates only
+   the residuals. Two long series that share a drift will look "significant" in the raw
+   regression for that reason alone — the detrended version exists so a relationship that
+   survives having the shared trend removed is meaningfully stronger evidence than one that only
+   shows up raw. `save_plot_png` (and the CSV/LaTeX writers) key off `model_name`, so both
+   regressions' outputs land side by side in `regression_summaries.csv`/`tex_tables/`/`plots/`.
 4. `tex_format.py` — assembles the per-week LaTeX document. `init_folder_tex` (called once, on
    the first day of a new week folder) writes `main_file.tex` from the templates in
    `tex_templates/` and a fresh `weekly_summary.tex` stub, with `\include`s pre-wired for all 7
    days of that ISO week. `daily_tex_update` writes that day's `tex_things/day_<date>.tex`
-   section (series descriptions + regression table + plot).
+   section (series descriptions + raw regression table/plot + detrended regression table/plot,
+   each labeled and captioned separately so the two are never confused).
 5. `ai_summary.py` — `generate_weekly_summary(file_path)` is called at the end of every daily run
-   (not just at week's end). It reads `regression_summaries.csv` and every
-   `tex_things/day_*.tex` written so far that week, sends that as context to
-   `claude-opus-4-8` via the `anthropic` SDK, and overwrites `weekly_summary.tex` with the
-   result — always prefixed by a `tcolorbox` disclaimer stating it's AI-generated. Because it
-   runs and overwrites daily, the file is always current and no special end-of-week detection is
-   needed. On any failure (missing key, API/network error, no data yet) it writes a fallback
-   disclaimer-only file instead of raising, so a bad AI call never breaks the LaTeX build or the
-   rest of the daily pipeline. Returns `True`/`False` (AI summary vs. fallback) so
-   `main_loop.py` can report it in the daily digest. Model output text is LaTeX-escaped before
-   insertion — never write raw model output into a `.tex` file without going through
-   `_escape_latex`.
+   (not just at week's end). It reads `regression_summaries.csv` (which now contains both the raw
+   and `_detrended` rows per day) and every `tex_things/day_*.tex` written so far that week, sends
+   that as context to `claude-opus-4-8` via the `anthropic` SDK, and overwrites
+   `weekly_summary.tex` with the result — always prefixed by a `tcolorbox` disclaimer stating
+   it's AI-generated. The system prompt explicitly teaches the raw-vs-detrended distinction and
+   instructs the model to weigh a relationship that survives detrending as stronger evidence than
+   one that only appears raw. Because it runs and overwrites daily, the file is always current and
+   no special end-of-week detection is needed. On any failure (missing key, API/network error, no
+   data yet) it writes a fallback disclaimer-only file instead of raising, so a bad AI call never
+   breaks the LaTeX build or the rest of the daily pipeline. Returns `True`/`False` (AI summary vs.
+   fallback) so `main_loop.py` can report it in the daily digest. Model output text is
+   LaTeX-escaped before insertion — never write raw model output into a `.tex` file without going
+   through `_escape_latex`.
 6. `main_loop.py`'s `build_digest(...)` assembles a short markdown summary of the day's run
    (series pulled, regression R²/p-value, AI summary status) and writes it to `digest.txt` at the
    repo root (gitignored, overwritten every run). `main_loop.sh` appends a PDF-compile status
