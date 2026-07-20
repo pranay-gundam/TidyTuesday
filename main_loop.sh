@@ -36,8 +36,16 @@ for dir in year_*_week_*/; do
     week_year="${week_year%%_week_*}"
     week_num="${dir##*_week_}"
 
-    mkdir -p "Archive/$week_year"
-    mv "$dir" "Archive/$week_year/week_${week_num}"
+    target="Archive/$week_year/week_${week_num}"
+    mkdir -p "$target"
+    # Merge into the target rather than a plain `mv "$dir" "$target"`: if a
+    # prior run already archived this week but its deletion of "$dir" never
+    # got committed (e.g. a `git add` that missed the removal), "$dir" comes
+    # back on the next checkout and a plain `mv` onto the now-existing,
+    # non-empty "$target" fails with "cannot overwrite ... Directory not
+    # empty" and aborts the whole run.
+    cp -a "$dir"/. "$target"/
+    rm -rf "$dir"
 done
 shopt -u nullglob
 
