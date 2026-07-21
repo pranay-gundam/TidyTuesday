@@ -1,0 +1,31 @@
+\section{Date: 2026-07-21}
+\noindent \textbf{Series ID: TREAS1T5} 
+
+\noindent This series is titled Assets: Securities Held Outright: U.S. Treasury Securities: Maturing in over 1 Year to 5 Years: Wednesday Level and has a frequency of Weekly, As of Wednesday. The units are Millions of U.S. Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 2002-12-18 and the observation end date is 2026-07-15.The popularity of this series is 21. \\ 
+
+\noindent \textbf{Series ID: CUURD300SAS} 
+
+\noindent This series is titled Consumer Price Index for All Urban Consumers: Services in South - Size Class D (DISCONTINUED) and has a frequency of Monthly. The units are Index 1982-1984=100 and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1977-12-01 and the observation end date is 2017-12-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-07-21.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-07-21.png}
+\caption{Raw Regression Plot for 2026-07-21}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-07-21_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-07-21_detrended.png}
+\caption{Detrended Regression Plot for 2026-07-21}
+\end{figure}
+\newpage
