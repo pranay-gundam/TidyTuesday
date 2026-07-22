@@ -15,3 +15,19 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
 [2] The condition number is large, 1.59e+05. This might indicate that there are
 strong multicollinearity or other numerical problems."
+2026-07-22,const,-1720.1069373749342,0.7681013657881051,-13324.768261966698,9884.55438721683,0.9846698039276431,4110.767217452868,8.66827510543278e-60,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.31e+06. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-07-22,value_fred_NNBICPA027N,0.41563776554484183,8.668275105432382e-60,0.40268715404025496,0.4285883770494287,0.9846698039276431,4110.767217452868,8.66827510543278e-60,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.31e+06. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-07-22_detrended,const,2.697561285458505e-09,0.9999999999994564,-7878.50656501075,7878.506565016145,0.8728462040923517,439.32748262177824,2.313501733336354e-30,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.05e+05. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-07-22_detrended,value_fred_NNBICPA027N_detrended,0.402383854388624,2.3135017333363543e-30,0.3640322906250412,0.4407354181522068,0.8728462040923517,439.32748262177824,2.313501733336354e-30,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.05e+05. This might indicate that there are
+strong multicollinearity or other numerical problems."
