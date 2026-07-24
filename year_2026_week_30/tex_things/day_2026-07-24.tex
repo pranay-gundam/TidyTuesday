@@ -1,0 +1,31 @@
+\section{Date: 2026-07-24}
+\noindent \textbf{Series ID: BOPGA} 
+
+\noindent This series is titled Unilateral Transfers, Net (DISCONTINUED) and has a frequency of Annual. The units are Billions of Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1960-01-01 and the observation end date is 2013-01-01.The popularity of this series is 1. \\ 
+
+\noindent \textbf{Series ID: BKTTPAA641N} 
+
+\noindent This series is titled Failures and Assistance Transactions of all Institutions by Transaction Type (Purchase and Assumption (PA)) for the United States and Other Areas and has a frequency of Annual. The units are Number of Institutions and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1934-01-01 and the observation end date is 2026-01-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-07-24.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-07-24.png}
+\caption{Raw Regression Plot for 2026-07-24}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-07-24_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-07-24_detrended.png}
+\caption{Detrended Regression Plot for 2026-07-24}
+\end{figure}
+\newpage
