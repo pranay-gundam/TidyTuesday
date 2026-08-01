@@ -1,0 +1,31 @@
+\section{Date: 2026-08-01}
+\noindent \textbf{Series ID: WPU055121012} 
+
+\noindent This series is titled Producer Price Index by Commodity: Fuels and Related Products and Power: Residential Natural Gas for Middle Atlantic Census Division and has a frequency of Monthly. The units are Index Jun 2012=100 and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 2012-06-01 and the observation end date is 2026-06-01.The popularity of this series is 1. \\ 
+
+\noindent \textbf{Series ID: SFTPGRM157SFRBSF} 
+
+\noindent This series is titled San Francisco Tech Pulse (DISCONTINUED) and has a frequency of Monthly. The units are Percent Change and the seasonal adjustment is Seasonally Adjusted.The observation start date is 1971-05-01 and the observation end date is 2020-03-01.The popularity of this series is 2. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-08-01.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-08-01.png}
+\caption{Raw Regression Plot for 2026-08-01}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-08-01_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-08-01_detrended.png}
+\caption{Detrended Regression Plot for 2026-08-01}
+\end{figure}
+\newpage
