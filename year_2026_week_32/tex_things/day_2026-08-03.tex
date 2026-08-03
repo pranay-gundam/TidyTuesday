@@ -1,0 +1,31 @@
+\section{Date: 2026-08-03}
+\noindent \textbf{Series ID: CBBTCUSD} 
+
+\noindent This series is titled Coinbase Bitcoin and has a frequency of Daily, 7-Day. The units are U.S. Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 2014-12-01 and the observation end date is 2026-08-02.The popularity of this series is 75. \\ 
+
+\noindent \textbf{Series ID: SFTPINDM114SFRBSF} 
+
+\noindent This series is titled San Francisco Tech Pulse (DISCONTINUED) and has a frequency of Monthly. The units are Index Jan 2000=100 and the seasonal adjustment is Seasonally Adjusted.The observation start date is 1971-04-01 and the observation end date is 2020-03-01.The popularity of this series is 10. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-08-03.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-08-03.png}
+\caption{Raw Regression Plot for 2026-08-03}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-08-03_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-08-03_detrended.png}
+\caption{Detrended Regression Plot for 2026-08-03}
+\end{figure}
+\newpage
