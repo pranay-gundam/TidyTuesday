@@ -1,0 +1,9 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2026-08-18,const,-202.25297483636365,0.02387783644668485,-374.4783591205141,-30.027590552213212,0.5952032930042691,26.466764894383967,6.796659164677189e-05,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-18,value_fred_USHSPTLNRSQGSP,4.555415623562874,6.796659164677098e-05,2.695096226581697,6.4157350205440515,0.5952032930042691,26.466764894383967,6.796659164677189e-05,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-18_detrended,const,1.868261101378721e-11,0.9999999999983693,-18.940845546270182,18.94084554630755,0.07934760215674064,1.5513529777005919,0.22890596075435576,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-18_detrended,value_fred_USHSPTLNRSQGSP_detrended,7.190742087135293,0.22890596075435551,-4.938351230397547,19.319835404668133,0.07934760215674064,1.5513529777005919,0.22890596075435576,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
