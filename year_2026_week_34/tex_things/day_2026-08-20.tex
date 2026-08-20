@@ -1,0 +1,31 @@
+\section{Date: 2026-08-20}
+\noindent \textbf{Series ID: CANRECM} 
+
+\noindent This series is titled OECD based Recession Indicators for Canada from the Peak through the Trough (DISCONTINUED) and has a frequency of Monthly. The units are +1 or 0 and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1960-02-01 and the observation end date is 2022-09-01.The popularity of this series is 9. \\ 
+
+\noindent \textbf{Series ID: SFTPAGRM158SFRBSF} 
+
+\noindent This series is titled San Francisco Tech Pulse (DISCONTINUED) and has a frequency of Monthly. The units are Percent Change at Annual Rate and the seasonal adjustment is Seasonally Adjusted.The observation start date is 1971-05-01 and the observation end date is 2020-03-01.The popularity of this series is 6. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-08-20.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-08-20.png}
+\caption{Raw Regression Plot for 2026-08-20}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-08-20_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-08-20_detrended.png}
+\caption{Detrended Regression Plot for 2026-08-20}
+\end{figure}
+\newpage
