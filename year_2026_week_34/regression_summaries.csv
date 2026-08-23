@@ -39,3 +39,11 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-08-22_detrended,value_fred_EMISSCO2VDFCCBA_detrended,-0.18397631189810046,0.03966798107799514,-0.35864611903297383,-0.009306504763227058,0.13794590528177297,4.640580304277781,0.039667981077995136,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-23,const,168.3742704384187,6.99371171418876e-24,143.43745378418797,193.31108709264944,0.27156147526158636,36.534345276689415,2.7199967397463174e-08,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-23,value_fred_EDEF,-0.35599770787719487,2.7199967397463515e-08,-0.4728777927018999,-0.23911762305248982,0.27156147526158636,36.534345276689415,2.7199967397463174e-08,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-23_detrended,const,1.0113243575915476e-11,0.9999999999979942,-7.962850377759306,7.962850377779532,0.012553737734738668,1.2459070888395296,0.26706503176373864,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-23_detrended,value_fred_EDEF_detrended,-0.34153003094671647,0.26706503176373575,-0.9487276359203456,0.2656675740269127,0.012553737734738668,1.2459070888395296,0.26706503176373864,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
