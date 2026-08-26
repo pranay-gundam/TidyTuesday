@@ -27,3 +27,11 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-08-25_detrended,value_fred_G17MVSFAUTOS_detrended,0.0,nan,0.0,0.0,nan,nan,nan,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-26,const,3082.1539470356083,1.1403033463181334e-07,1971.6549628814175,4192.652931189799,0.09956790872062904,26.649278978470527,5.10356325011589e-07,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-26,value_fred_SFTPINDM114SFRBSF,34.14309133698077,5.103563250115639e-07,21.114584815143495,47.17159785881804,0.09956790872062904,26.649278978470527,5.10356325011589e-07,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-26_detrended,const,-3.482103494434341e-11,0.9999999999975882,-22.668441352653826,22.668441352584185,0.13600974912064345,37.93833264289006,3.0360841435984854e-09,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-08-26_detrended,value_fred_SFTPINDM114SFRBSF_detrended,6.1601945408492185,3.0360841435984536e-09,4.190087450721954,8.130301630976483,0.13600974912064345,37.93833264289006,3.0360841435984854e-09,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
