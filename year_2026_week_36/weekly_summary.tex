@@ -1,0 +1,13 @@
+\section{Weekly Summary}
+
+\begin{tcolorbox}[colback=yellow!10,colframe=black!50,title=AI-Generated Content]
+\noindent The summary below was written by Claude (Anthropic) from that week's regression outputs and series descriptions. It has not been reviewed or fact-checked by a human, and should be read as an automated, informal recap -- not analysis.
+\end{tcolorbox}
+
+Welcome back to the show where we hurl randomly selected economic time series at each other and see if anything sticks. This week's contestant lineup was, frankly, a little thin -- we got exactly one pairing to report on, and buckle up, because it's a real barn-burner. In the blue corner: the "Percent of Value of Loans, Small Business Administration Backed for Zero Interval, Moderate Risk, All Commercial Banks," a series so beloved it scored a popularity rating of one, and which was mercifully discontinued in 2017 like a canceled sitcom nobody watched. In the red corner: the house price index for Ft. Lauderdale-Pompano Beach-Sunrise, Florida, because why not.
+
+So did the fate of Florida real estate hinge on moderate-risk SBA loans? I regret to inform you that it did not. The raw regression handed us an R-squared of about 0.05, which in human terms means these two series explain roughly five percent of each other and shrug about the rest. The p-value on the loan variable came in at a majestic 0.33, which is statistics-speak for "please stop looking at me." Honestly, this is refreshing. Usually the raw regression at least fakes a dramatic trend-driven crush that we get to debunk five minutes later. This time it didn't even bother pretending.
+
+And the detrended version -- our usual myth-busting hero, the one that strips out the shared drift to see if any real love remains -- somehow made things marginally spicier, nudging the R-squared up to about 0.10 with a p-value of 0.18. That's still nowhere near significant, mind you, so nobody's booking a press conference, but it's the rare case where wrestling the trends out of the data made the relationship look a hair less pathetic rather than more. Don't read anything into that. I mean it. There is no universe in which zero-interval moderate-risk small business lending secretly governs Broward County home values, and if there were, we would not be the ones to discover it via a bot that grabs random FRED series before breakfast.
+
+As always, the standing reminder: these pairings are chosen by dice, not by theory, spurious correlation is the house special here, and any relationship we find -- strong, weak, or comatose like this week's -- is entertainment, not evidence. Nobody regress-and-tell. See you next week, when the random number generator hopefully hands us something with more than three data points and a pulse.
