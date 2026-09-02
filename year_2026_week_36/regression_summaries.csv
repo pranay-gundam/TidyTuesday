@@ -7,3 +7,15 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-08-31_detrended,value_fred_EBZMNQ_detrended,-0.30901637842567903,0.18455092496448394,-0.7795362024244161,0.16150344557305812,0.09565121156368062,1.9038249734631976,0.18455092496448372,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-09-02,const,55.38967442793576,0.00012984543381996597,27.4547956730108,83.32455318286071,0.04176857386442756,7.715294418822054,0.006065809753352389,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.28e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-02,value_fred_CEU3100000016,-0.4390459281082441,0.006065809753352492,-0.750978994280415,-0.12711286193607313,0.04176857386442756,7.715294418822054,0.006065809753352389,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.28e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-02_detrended,const,-1.765254609153999e-14,0.9999999999999676,-0.8583824711708924,0.8583824711708571,0.00030474925419898824,0.05395706136743207,0.8165837836530568,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-09-02_detrended,value_fred_CEU3100000016_detrended,-0.01648205658522384,0.8165837836530874,-0.15651008326103946,0.12354597009059179,0.00030474925419898824,0.05395706136743207,0.8165837836530568,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
