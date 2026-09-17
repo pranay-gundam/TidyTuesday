@@ -23,3 +23,19 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-09-16_detrended,value_fred_EMISSCO2VDFCCBA_detrended,-1.0600244515524866,0.01669384057026434,-1.9149033764436678,-0.20514552666130537,0.16621821201691178,6.379346324423511,0.016693840570264372,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-09-17,const,101.6727395447252,1.8250813291819494e-84,100.07413782030925,103.27134126914116,0.08332082016027542,6.362593958159982,0.013931414521708905,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.25e+08. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-17,value_fred_IIPUSASSQ,-8.044920333719283e-08,0.01393141452171115,-1.4405914395909683e-07,-1.683926271528885e-08,0.08332082016027542,6.362593958159982,0.013931414521708905,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.25e+08. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-17_detrended,const,-2.0824314495015983e-12,0.9999999999880266,-0.2757788972841876,0.2757788972800227,0.17846792688787405,15.206655091171495,0.00021853878273336773,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.54e+06. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-17_detrended,value_fred_IIPUSASSQ_detrended,3.4939416124837657e-07,0.00021853878273336882,1.7069638745151248e-07,5.280919350452406e-07,0.17846792688787405,15.206655091171495,0.00021853878273336773,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.54e+06. This might indicate that there are
+strong multicollinearity or other numerical problems."

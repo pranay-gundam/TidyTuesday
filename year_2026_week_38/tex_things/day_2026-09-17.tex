@@ -1,0 +1,31 @@
+\section{Date: 2026-09-17}
+\noindent \textbf{Series ID: IIPUSASSQ} 
+
+\noindent This series is titled U.S. Assets and has a frequency of Quarterly, End of Period. The units are Millions of Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 2006-01-01 and the observation end date is 2026-01-01.The popularity of this series is 10. \\ 
+
+\noindent \textbf{Series ID: BSCICP035AM665S} 
+
+\noindent This series is titled Composite Leading Indicators: Composite Business Confidence Amplitude Adjusted for Major Five Asia Economies and has a frequency of Monthly. The units are Normalised (Normal=100) and the seasonal adjustment is Seasonally Adjusted.The observation start date is 2000-02-01 and the observation end date is 2023-12-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-09-17.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-09-17.png}
+\caption{Raw Regression Plot for 2026-09-17}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-09-17_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-09-17_detrended.png}
+\caption{Detrended Regression Plot for 2026-09-17}
+\end{figure}
+\newpage
