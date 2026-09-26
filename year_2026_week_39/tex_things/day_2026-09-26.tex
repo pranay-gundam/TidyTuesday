@@ -1,0 +1,31 @@
+\section{Date: 2026-09-26}
+\noindent \textbf{Series ID: A261RE1A156NBEA} 
+
+\noindent This series is titled Shares of gross domestic income and has a frequency of Annual. The units are Percent and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1929-01-01 and the observation end date is 2024-01-01.The popularity of this series is 3. \\ 
+
+\noindent \textbf{Series ID: ATNHPIUS37764Q} 
+
+\noindent This series is titled All-Transactions House Price Index for Peabody, MA (MSAD) (DISCONTINUED) and has a frequency of Quarterly. The units are Index 1995:Q1=100 and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1979-07-01 and the observation end date is 2013-01-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-09-26.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-09-26.png}
+\caption{Raw Regression Plot for 2026-09-26}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-09-26_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-09-26_detrended.png}
+\caption{Detrended Regression Plot for 2026-09-26}
+\end{figure}
+\newpage

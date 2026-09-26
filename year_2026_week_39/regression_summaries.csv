@@ -51,3 +51,13 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-09-25_detrended,value_fred_CWSR0000SAE_detrended,10730.219449595908,6.752241184522564e-06,6722.9772597443425,14737.461639447474,0.5084106563420903,29.99232840201822,6.752241184522544e-06,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-09-26,value_fred_A261RE1A156NBEA,1.4129470588235296,1.5235873272744547e-13,1.1726236886303394,1.6532704290167197,-2.220446049250313e-16,nan,nan,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-09-26_detrended,const,-29.76253338868615,0.8250347579853525,-301.7497642272645,242.22469744989218,0.001551819394857934,0.04973540099532771,0.8249418162832882,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 9.98e-27. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular."
+2026-09-26_detrended,value_fred_A261RE1A156NBEA_detrended,57103425289223.91,0.8249418162833082,-464458842749853.1,578665693328301.0,0.001551819394857934,0.04973540099532771,0.8249418162832882,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The smallest eigenvalue is 9.98e-27. This might indicate that there are
+strong multicollinearity problems or that the design matrix is singular."
