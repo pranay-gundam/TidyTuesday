@@ -1,0 +1,13 @@
+\section{Weekly Summary}
+
+\begin{tcolorbox}[colback=yellow!10,colframe=black!50,title=AI-Generated Content]
+\noindent The summary below was written by Claude (Anthropic) from that week's regression outputs and series descriptions. It has not been reviewed or fact-checked by a human, and should be read as an automated, informal recap -- not analysis.
+\end{tcolorbox}
+
+This week our tireless random-number generator reached deep into the FRED grab bag and produced a pairing so inevitable, so obviously destined, that historians will surely study it for generations: the real GDP of wood product manufacturing in the Great Lakes region versus the number of mobile cellular subscriptions per 100 people across Europe and Central Asia. Lumber in Michigan, phones in Kazakhstan. If you don't feel these two quantities were always meant to be together, I frankly don't know what to tell you.
+
+Here's where it gets deliciously backwards. The raw regression -- the one where we just fling the two series at each other and see if they stick -- came back with a shrug. A p-value of 0.14, an R-squared of eight percent, and a footnote politely warning us about "numerical problems," which is the statistical equivalent of the software backing slowly out of the room. Normally this is the part where a shared trend swoops in to manufacture a fake romance, but no such luck: even the trend mirage couldn't be bothered to show up.
+
+And then, plot twist, the detrended version -- the one that strips out each series' own long-run drift and is supposed to be the harder, more honest test -- actually got MORE significant. P-value drops to 0.02, R-squared doubles to about eighteen percent, and the coefficient stays stubbornly negative: more phones, less Great Lakes plywood. This is the rare inversion of our usual scandal. Instead of a raw hit collapsing under scrutiny, we have a nothingburger that firmed up once we removed the trends. Which, in the strange arithmetic of this project, makes it one of the more "interesting" results we've stumbled into, if you squint and lower your standards to floor level.
+
+Now, before anyone drafts a theory about smartphones single-handedly bulldozing Midwestern sawmills, let me remind you with great affection: these two series were paired by a coin flip, there is no plausible mechanism connecting them, and eighteen percent of variance "explained" is still eighty-two percent of variance doing whatever it pleases. Spurious correlation is not a bug of this project, it is the entire point. Enjoy the number, cherish it, and please do not put it in a spreadsheet you send to your boss.

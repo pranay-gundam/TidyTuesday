@@ -1,0 +1,31 @@
+\section{Date: 2026-09-28}
+\noindent \textbf{Series ID: GLAKWPMANRGSP} 
+
+\noindent This series is titled Real Gross Domestic Product: Wood Product Manufacturing (321) in the Great Lakes BEA Region and has a frequency of Annual. The units are Millions of Chained 2017 Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1997-01-01 and the observation end date is 2024-01-01.The popularity of this series is 1. \\ 
+
+\noindent \textbf{Series ID: ITCELSETSP2ECS} 
+
+\noindent This series is titled Mobile Cellular Subscriptions: All Income Levels in Europe and Central Asia and has a frequency of Annual. The units are Number per 100 People and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1960-01-01 and the observation end date is 2025-01-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-09-28.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-09-28.png}
+\caption{Raw Regression Plot for 2026-09-28}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-09-28_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-09-28_detrended.png}
+\caption{Detrended Regression Plot for 2026-09-28}
+\end{figure}
+\newpage
