@@ -23,3 +23,19 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-09-29_detrended,value_fred_W269RE1A156NBEA_detrended,-174.70651351047525,0.0017833835471263101,-279.95662236652623,-69.45640465442426,0.22908072437653204,11.291801621211428,0.0017833835471263145,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-09-30,const,8.792978349726516,2.1330355362597172e-20,8.146262144435319,9.439694555017713,0.3210335703823257,11.82067169959712,0.0020612244599484968,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.36e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-30,value_fred_IEAMSIPN,-0.0001164262997012999,0.002061224459948513,-0.00018616919022620672,-4.668340917639307e-05,0.3210335703823257,11.82067169959712,0.0020612244599484968,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 2.36e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-30_detrended,const,6.16243167606001e-14,0.9999999999995749,-0.23585066650016873,0.23585066650029196,0.02384044597549706,0.6105673472437952,0.4419117109459746,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.1e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-09-30_detrended,value_fred_IEAMSIPN_detrended,8.159469034194941e-05,0.44191171094597437,-0.00013346798159145326,0.0002966573622753521,0.02384044597549706,0.6105673472437952,0.4419117109459746,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.1e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
