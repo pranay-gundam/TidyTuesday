@@ -15,3 +15,19 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-10-13_detrended,value_fred_APUB30074714_detrended,8.739340524899598,1.2343620853835187e-51,7.866995701501578,9.611685348297618,0.6257529915193127,389.5834668549495,1.2343620853834387e-51,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-14,const,481585.82944062946,0.08175227698062604,-61792.04172963672,1024963.7006108956,0.8049360779645838,416.77898724738145,1.2552892359333632e-37,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.94e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-14,value_fred_QFR201333USNO,237.33812245987224,1.255289235933378e-37,214.2761008001405,260.40014411960397,0.8049360779645838,416.77898724738145,1.2552892359333632e-37,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 5.94e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-14_detrended,const,-4.732100933324546e-09,0.9999999999999452,-136119.30213347278,136119.3021334633,0.022422767420811063,2.3166451038623888,0.13112062323068202,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.71e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-14_detrended,value_fred_QFR201333USNO_detrended,28.141481824368498,0.1311206232306849,-8.53604040694654,64.81900405568354,0.022422767420811063,2.3166451038623888,0.13112062323068202,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.71e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
