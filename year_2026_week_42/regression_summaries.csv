@@ -39,3 +39,15 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-10-15_detrended,value_fred_PLGCPPSEA670NRUG_detrended,-4.149812106448065,0.665235842473024,-23.504511403350733,15.204887190454604,0.005925250409606675,0.19073818461392478,0.6652358424730207,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-16,const,1.8822544676183117,0.03754482257633891,0.12106496737892636,3.643443967857697,0.32377771210424666,8.618466031357556,0.008835760887613417,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 8.54e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-16,value_fred_BAMLCC8A015PYTRIV,0.0005608817143629085,0.008835760887613002,0.0001594920072830964,0.0009622714214427206,0.32377771210424666,8.618466031357556,0.008835760887613417,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 8.54e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-16_detrended,const,-2.4952782895493186e-13,0.9999999999943701,-0.07327240283450571,0.07327240283400667,0.004215604027180242,0.07620211041278062,0.7856561277970185,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-16_detrended,value_fred_BAMLCC8A015PYTRIV_detrended,-7.097795593946854e-05,0.7856561277970159,-0.0006111721668529025,0.00046921625497396545,0.004215604027180242,0.07620211041278062,0.7856561277970185,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
