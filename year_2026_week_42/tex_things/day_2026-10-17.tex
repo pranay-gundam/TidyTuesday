@@ -1,0 +1,31 @@
+\section{Date: 2026-10-17}
+\noindent \textbf{Series ID: QTAXT01QTAXCAT3INNO} 
+
+\noindent This series is titled State Tax Collections: T01 Property Taxes for Indiana and has a frequency of Quarterly. The units are Millions of U.S. Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1994-01-01 and the observation end date is 2026-04-01.The popularity of this series is 1. \\ 
+
+\noindent \textbf{Series ID: NPTLTL19} 
+
+\noindent This series is titled Nonperforming Total Loans (past due 90+ days plus nonaccrual) to Total Loans, Banks with Total Assets up to \$300M, Pacific Census Division (DISCONTINUED) and has a frequency of Quarterly, End of Period. The units are Percent and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1988-01-01 and the observation end date is 2020-07-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-10-17.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-10-17.png}
+\caption{Raw Regression Plot for 2026-10-17}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-10-17_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-10-17_detrended.png}
+\caption{Detrended Regression Plot for 2026-10-17}
+\end{figure}
+\newpage
