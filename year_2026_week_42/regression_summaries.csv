@@ -59,3 +59,11 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-10-17_detrended,value_fred_QTAXT01QTAXCAT3INNO_detrended,-0.7170675791847793,3.751514159545895e-09,-0.9380060472728224,-0.4961291110967361,0.28285304967356184,41.413506955868726,3.751514159545864e-09,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-18,const,388.36691972355004,1.98003166061631e-21,326.20499680386854,450.52884264323154,0.3968526496449887,61.191177239293815,7.947130181516701e-12,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-18,value_fred_DEXSIUS,-147.6593065697912,7.947130181516688e-12,-185.14385846289355,-110.17475467668885,0.3968526496449887,61.191177239293815,7.947130181516701e-12,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-18_detrended,const,-7.456257833382551e-12,0.9999999999980393,-6.009523456656749,6.009523456641836,0.2714783955912511,34.65578870578125,6.190399046140615e-08,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-18_detrended,value_fred_DEXSIUS_detrended,113.8433121645105,6.190399046140599e-08,75.44116281788848,152.2454615111325,0.2714783955912511,34.65578870578125,6.190399046140615e-08,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
