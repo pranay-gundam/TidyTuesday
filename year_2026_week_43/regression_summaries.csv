@@ -27,3 +27,11 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-10-23_detrended,value_fred_STTMINWGDC_detrended,0.14197061156927737,0.9068546400350144,-2.288123577683309,2.572064800821864,0.00030758708412559344,0.01384567753723161,0.9068546400350102,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-24,const,96.15970475845862,2.3087518810337925e-96,94.0566277484652,98.26278176845203,0.13065483617600815,14.728527261746109,0.0002199527151614468,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-24,value_fred_CUURX200SS47014,0.017215371470642407,0.00021995271516146435,0.008313512335897113,0.026117230605387703,0.13065483617600815,14.728527261746109,0.0002199527151614468,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-24_detrended,const,-3.933103842612695e-12,0.9999999999911355,-0.7007445271919345,0.7007445271840683,0.05044006230852316,5.205702041571752,0.024676461950183883,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-24_detrended,value_fred_CUURX200SS47014_detrended,0.013118726620023889,0.02467646195018417,0.0017084543044133989,0.02452899893563438,0.05044006230852316,5.205702041571752,0.024676461950183883,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
