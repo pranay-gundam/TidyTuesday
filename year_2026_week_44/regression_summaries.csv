@@ -1,0 +1,17 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2026-10-26,const,0.4795422985586356,5.691928252260381e-248,0.4538675077125085,0.5052170894047627,0.056957699537615425,206.37935246871234,1.744782896929825e-45,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.83e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-26,value_fred_NASDAQCX601020PI,-4.034084058787165e-05,1.744782896931124e-45,-4.584655617772286e-05,-3.483512499802044e-05,0.056957699537615425,206.37935246871234,1.744782896929825e-45,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 7.83e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-26_detrended,const,-2.88372841231177e-14,0.9999999999970135,-0.01510419120235695,0.015104191202299274,0.07137930571575413,262.6509285567079,5.734513968744718e-57,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.66e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-26_detrended,value_fred_NASDAQCX601020PI_detrended,-7.538889264149325e-05,5.734513968751396e-57,-8.450941781571173e-05,-6.626836746727477e-05,0.07137930571575413,262.6509285567079,5.734513968744718e-57,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.66e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
