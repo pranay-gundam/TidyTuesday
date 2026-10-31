@@ -71,3 +71,19 @@ strong multicollinearity or other numerical problems."
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-10-30_detrended,value_fred_PUA0T17FL12073A647NCEN_detrended,-0.003055767389655843,0.7119222352090613,-0.019905588398147003,0.013794053618835317,0.0055492351632661086,0.1395050252733509,0.711922235209057,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-10-31,const,-153.4786376364522,6.896156056081116e-11,-192.82714866408716,-114.13012660881722,0.7689716060323402,216.35069843016316,2.333755250551197e-22,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.04e+08. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-31,value_fred_ADPMCDMANERNSA,1.7933864853334753e-05,2.3337552505512925e-22,1.549884337029234e-05,2.0368886336377165e-05,0.7689716060323402,216.35069843016316,2.333755250551197e-22,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.04e+08. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-31_detrended,const,1.1323164628151972e-12,0.9999999999979109,-0.8603717786321784,0.860371778634443,0.00901582921582178,0.59136050434053,0.44467883049850876,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.98e+05. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-10-31_detrended,value_fred_ADPMCDMANERNSA_detrended,8.323765883681152e-07,0.4446788304985049,-1.3293549270556344e-06,2.9941081037918645e-06,0.00901582921582178,0.59136050434053,0.44467883049850876,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.98e+05. This might indicate that there are
+strong multicollinearity or other numerical problems."
