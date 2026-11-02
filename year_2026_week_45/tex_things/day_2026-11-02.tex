@@ -1,0 +1,31 @@
+\section{Date: 2026-11-02}
+\noindent \textbf{Series ID: SMU25781000600000001} 
+
+\noindent This series is titled All Employees: Goods Producing in Springfield, MA-CT (NECTA) and has a frequency of Monthly. The units are Thousands of Persons and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1990-01-01 and the observation end date is 2024-12-01.The popularity of this series is 1. \\ 
+
+\noindent \textbf{Series ID: PRGONUPIHCSA} 
+
+\noindent This series is titled Medical Services Expenditures by Provider: Nursing Homes: Proprietary and Government Nursing Homes Price Index and has a frequency of Annual. The units are Index 2017=100 and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 2000-01-01 and the observation end date is 2021-01-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-11-02.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-11-02.png}
+\caption{Raw Regression Plot for 2026-11-02}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-11-02_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-11-02_detrended.png}
+\caption{Detrended Regression Plot for 2026-11-02}
+\end{figure}
+\newpage
