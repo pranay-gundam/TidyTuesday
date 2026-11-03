@@ -7,3 +7,19 @@ model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
 2026-11-02_detrended,value_fred_SMU25781000600000001_detrended,-0.08662312943556827,0.5231717030588903,-0.3646678497408233,0.19142159086968674,0.02067980950243775,0.42232989175748553,0.523171703058891,"Notes:
 [1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+2026-11-03,const,1.9234397979351305,0.4111934381342309,-2.696689215566658,6.543568811436919,0.1352334640354913,17.514724890553175,5.6948589723866566e-05,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.7e+05. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-11-03,value_fred_AITINO,0.0003954826045577289,5.6948589723867576e-05,0.0002082455905913503,0.0005827196185241076,0.1352334640354913,17.514724890553175,5.6948589723866566e-05,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.7e+05. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-11-03_detrended,const,-7.673861546209082e-13,0.999999999998006,-0.607068600389295,0.6070686003877602,0.057076203521696844,6.779481882104711,0.01047049045716575,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.35e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-11-03_detrended,value_fred_AITINO_detrended,0.0002377867363511274,0.010470490457165676,5.683808323786251e-05,0.0004187353894643923,0.057076203521696844,6.779481882104711,0.01047049045716575,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 3.35e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
