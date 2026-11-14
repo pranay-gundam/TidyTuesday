@@ -1,0 +1,31 @@
+\section{Date: 2026-11-14}
+\noindent \textbf{Series ID: FDHBFRB} 
+
+\noindent This series is titled Federal Debt Held by Federal Reserve Banks (DISCONTINUED) and has a frequency of Quarterly, End of Period. The units are Billions of Dollars and the seasonal adjustment is Seasonally Adjusted.The observation start date is 1953-01-01 and the observation end date is 1998-10-01.The popularity of this series is 3. \\ 
+
+\noindent \textbf{Series ID: U13SMI} 
+
+\noindent This series is titled Manufacturers' Materials and Supplies Inventories: Textile Mills and has a frequency of Monthly, End of Period. The units are Millions of Dollars and the seasonal adjustment is Not Seasonally Adjusted.The observation start date is 1992-01-01 and the observation end date is 2026-09-01.The popularity of this series is 1. \\ 
+
+\subsection{Raw Regression}
+\noindent Regresses the two series against each other directly. A significant result here can come just as easily from both series sharing a long-run trend as from any real relationship.
+
+\input{tex_tables/regression_table_2026-11-14.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-11-14.png}
+\caption{Raw Regression Plot for 2026-11-14}
+\end{figure}
+\newpage
+\subsection{Detrended Regression}
+\noindent Regresses the residuals of each series after removing its own linear time trend, so a shared trend can no longer drive the result on its own. A relationship that stays significant here is better evidence of a genuine link between the two series.
+
+\input{tex_tables/regression_table_2026-11-14_detrended.tex}
+
+\begin{figure}
+\centering
+\includegraphics[scale = 0.9]{plots/plot_2026-11-14_detrended.png}
+\caption{Detrended Regression Plot for 2026-11-14}
+\end{figure}
+\newpage
