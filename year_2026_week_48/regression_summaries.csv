@@ -1,0 +1,17 @@
+model_name,variable,value,pvalue,conf_int_lower,conf_int_upper,rsquared,fvalue,f_pvalue,notes
+2026-11-23,const,4.567336953156433,0.24674086722287755,-3.372340509800659,12.507014416113524,0.0009175161764081174,0.022040610850788858,0.8832194672873596,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 9.85e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-11-23,value_fred_PECIUB0T4DC11000A647NCEN,-5.044478302019498e-05,0.8832194672873486,-0.0007517269468537406,0.0006508373808133506,0.0009175161764081174,0.022040610850788858,0.8832194672873596,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 9.85e+04. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-11-23_detrended,const,-1.7262580254140403e-13,0.9999999999996723,-0.858193826068752,0.8581938260684068,0.01996767075297623,0.4889880504652584,0.4911012825110852,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.24e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
+2026-11-23_detrended,value_fred_PECIUB0T4DC11000A647NCEN_detrended,-0.00023523104355567623,0.49110128251108665,-0.0009295097737350901,0.00045904768662373766,0.01996767075297623,0.4889880504652584,0.4911012825110852,"Notes:
+[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.
+[2] The condition number is large, 1.24e+03. This might indicate that there are
+strong multicollinearity or other numerical problems."
